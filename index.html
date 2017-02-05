@@ -31,6 +31,21 @@
             text-decoration: none;
             border-bottom: 1px solid rgba(255, 255, 255, 1);
         }
+
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+        .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
     </style>
 
     <!-- Google Analytics -->
@@ -89,6 +104,35 @@
 
 
     <!-- Posts -->
+    <p class="blocktext">
+        .................................... <br>
+        <b>A Practical Quantum Programming Workshop</b>
+        [<a href="https://www.youtube.com/watch?v=IpoASc18P5Q&feature=youtu.be" target="_blank">video</a>]
+        #talk <br>
+        <p class="videoWrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/IpoASc18P5Q" frameborder="0" allowfullscreen>
+            </iframe>
+        </p>
+    </p>
+        <small>
+            <p class="blocktext abstract">
+                16 January, 2017
+                <br>
+                <a href="https://stationq.microsoft.com/qip-2017/">QIP2017</a>, Seattle, WA <br><br>
+                Recent progress on quantum computing hardware, especially in superconducting qubit
+                systems, highlights the need for practical programming models and tools for these
+                first devices. In particular, many near-term applications are quantum/classical
+                hybrid algorithms, that treat the quantum computer as a co-processor. In this
+                workshop, we introduce
+                <a href="http://forest.rigetti.com">Forest</a>,
+                an open source quantum programming toolkit targeting near-term
+                applications and devices. This toolkit includes an intermediate quantum instruction
+                language (Quil) and Python libraries for generating and executing Quil code in
+                either a simulated environment or on a quantum processor.
+            </p>
+        </small>
+
+
     <p class="blocktext">
         .................................... <br>
         <b>Quantum Programming on Near-term Devices</b>
@@ -327,11 +371,11 @@
     </p>
         <small>
             <p class="blocktext abstract">
-                6 June, 2014 <br><br>
+                6 June, 2014 <br>
                 Kyoto, Japan -
                 Quantum Physics and Logic (
                 <a href="http://www-mmm.is.s.u-tokyo.ac.jp/qpl2014/" target="_blank">QPL</a>
-                ) 2014 <br>
+                ) 2014 <br><br>
                 We show that a pair of complementary dagger-Frobenius algebras, equipped with a
                 self-conjugate comonoid homomorphism onto one of the algebras, produce a nontrivial
                 unitary morphism on the product of the algebras. This gives an abstract
