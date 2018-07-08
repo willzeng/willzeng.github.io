@@ -154,22 +154,6 @@
             </p>
         </small>
 
-    <p class="blocktext">
-        .................................... <br>
-        <b>Why and how to program a quantum computer</b>
-        [<a href="http://willzeng.com/shared/QuantumProgramming_Introduction.pdf"
-            target="_blank">slides</a>]
-    </p>
-        <small>
-            <p class="blocktext abstract">
-                3 April, 2018 at Stanford Platform Lab
-                <br><br>
-                This talk is an introduction to modern quantum programming. It covers why you might
-                want to program a quantum computer and how you would do so today. The only background
-                assumed is linear algebra and complex numbers at the level of undergraduate computer science.
-            </p>
-        </small>
-
 
     <p class="blocktext">
         .................................... <br>
@@ -233,6 +217,8 @@
         <b>Unsupervised Machine Learning on Rigetti 19Q with Forest 1.2</b>
         [<a href="https://medium.com/rigetti/unsupervised-machine-learning-on-rigetti-19q-with-forest-1-2-39021339699"
             target="_blank">blogpost</a>]
+        [<a href="https://arxiv.org/abs/1712.05771"
+            target="_blank">arXiv</a>
     </p>
         <small>
             <p class="blocktext abstract">
@@ -241,32 +227,6 @@
                 We are excited to share that our team has demonstrated unsupervised machine learning 
                 using 19Q, our new 19-qubit general purpose superconducting quantum processor. We did 
                 this with a quantum/classical hybrid algorithm for clustering developed at Rigetti...
-            </p>
-        </small>
-    
-    <p class="blocktext">
-        .................................... <br>
-        <b>Unsupervised Machine Learning on a Hybrid Quantum Computer</b>
-        [<a href="https://arxiv.org/abs/1712.05771"
-            target="_blank">arXiv</a>]
-    </p>
-        <small>
-            <p class="blocktext abstract">
-                18 December, 2017
-                <br><br>
-                Machine learning techniques have led to broad adoption of a statistical model of 
-                computing. The statistical distributions natively available on quantum processors 
-                are a superset of those available classically. Harnessing this attribute has the 
-                potential to accelerate or otherwise improve machine learning relative to purely 
-                classical performance. A key challenge toward that goal is learning to hybridize 
-                classical computing resources and traditional learning techniques with the emerging 
-                capabilities of general purpose quantum processors. Here, we demonstrate such 
-                hybridization by training a 19-qubit gate model processor to solve a clustering 
-                problem, a foundational challenge in unsupervised learning. We use the quantum 
-                approximate optimization algorithm in conjunction with a gradient-free Bayesian 
-                optimization to train the quantum machine. This quantum/classical hybrid algorithm 
-                shows robustness to realistic noise, and we find evidence that classical optimization 
-                can be used to train around both coherent and incoherent imperfections.
             </p>
         </small>
 
@@ -317,19 +277,8 @@
             <p class="blocktext abstract">
                 20 June, 2017
                 <br><br>
-                We show that parametric coupling techniques can be used to generate selective
-                entangling interactions for multi-qubit processors. By inducing coherent population
-                exchange between adjacent qubits under frequency modulation, we implement a
-                universal gateset for a linear array of four superconducting qubits. An average
-                process fidelity of F=93% is estimated for three two-qubit gates via quantum
-                process tomography. We establish the suitability of these techniques for
-                computation by preparing a four-qubit maximally entangled state and comparing the
-                estimated state fidelity against the expected performance of the individual
-                entangling gates. In addition, we prepare an eight-qubit register in all possible
-                bitstring permutations and monitor the fidelity of a two-qubit gate across one pair
-                of these qubits. Across all such permutations, an average fidelity of F=91.6±2.6%
-                is observed. These results thus offer a path to a scalable architecture with high
-                selectivity and low crosstalk.
+                Demonstration of entangling gates on the Rigetti 8Q processor. This was the first process ever made
+                available through Forest.
             </p>
         </small>
 
@@ -343,19 +292,7 @@
             <p class="blocktext abstract">
                 20 June, 2017
                 <br><br>
-                We propose and implement a family of entangling qubit operations activated by
-                radio-frequency flux pulses. By parametrically modulating the frequency of a
-                tunable transmon, these operations selectively actuate resonant exchange of
-                excitations with a statically coupled, but otherwise off-resonant, neighboring
-                transmon. This direct exchange of excitations between qubits obviates the need for
-                mediator qubits or resonator modes, and it allows for the full utilization of all
-                qubits in a scalable architecture. Moreover, we are able to activate three
-                highly-selective resonances, corresponding to two different classes of entangling
-                gates that enable universal quantum computation: an iSWAP and a controlled-Z
-                rotation. This selectivity is enabled by resonance conditions that depend both on
-                frequency and amplitude, and is helpful in avoiding frequency crowding in a
-                scalable architecture. We report average process fidelities of F = 0.93 for a
-                135 ns iSWAP, and F = 0.92 for 175 ns and 270 ns controlled-Z operations.
+                Parametric entangling gates developed for the Rigetti 8Q processor.
             </p>
         </small>
 
@@ -372,12 +309,7 @@
                 <br><br>
                 Quantum Computing Institute Seminar, Oak Ridge National Lab, TN
                 <br>
-                The first scalable universal quantum computing devices are now being designed and
-                built in several groups worldwide.  As these devices mature, it is important to
-                consider how best to make use of them.  This will require new and applied
-                programming models for quantum computing.  In particular, promising near-term
-                algorithms for quantum simulation, quantum chemistry, and optimization require a
-                hybrid quantum/classical programming environment. In this talk, we introduce an
+                In this talk, we introduce an
                 open-source environment (<a href="http://forest.rigetti.com">Forest</a>) based on a
                 shared-memory intermediate
                 representation (<a href="https://arxiv.org/abs/1608.03355" target="_blank">Quil</a>).
@@ -405,16 +337,12 @@
                 16 January, 2017
                 <br>
                 <a href="https://stationq.microsoft.com/qip-2017/">QIP2017</a>, Seattle, WA <br><br>
-                Recent progress on quantum computing hardware, especially in superconducting qubit
-                systems, highlights the need for practical programming models and tools for these
-                first devices. In particular, many near-term applications are quantum/classical
-                hybrid algorithms, that treat the quantum computer as a co-processor. In this
-                workshop, we introduce
+                This was the original QIP workshop that introduced
                 <a href="http://forest.rigetti.com">Forest</a>,
                 an open source quantum programming toolkit targeting near-term
-                applications and devices. This toolkit includes an intermediate quantum instruction
-                language (Quil) and Python libraries for generating and executing Quil code in
-                either a simulated environment or on a quantum processor.
+                applications and devices. It is based on the Quil instruction set and introduces the libraries
+                <a href="http://github.com/rigetticomputing/pyquil/">pyQuil</a> and
+                <a href="http://github.com/rigetticomputing/grove/">grove</a>.
             </p>
         </small>
 
@@ -446,15 +374,8 @@
             <p class="blocktext abstract">
                 17 October, 2016
                 <br><br>
-                Quantum computing devices based on superconducting quantum circuits have rapidly
-                developed in the last few years. The building blocks-superconducting qubits, quantum-limited
-                amplifiers, and two-qubit gates-have been demonstrated by several groups. Small prototype
-                quantum processor systems have been implemented with performance adequate to demonstrate
-                quantum chemistry simulations, optimization algorithms, and enable experimental tests of
-                quantum error correction schemes. A major bottleneck in the effort to develop larger systems
-                is the need for a scalable functional architecture that combines all the core building blocks
-                in a single, scalable technology. We describe such a functional architecture, based on a planar
-                lattice of transmon and fluxonium qubits, parametric amplifiers, and a novel fast DC
+                We describe a scalable functional architecture for superconducting quantum computation, based on a
+                planar lattice of transmon and fluxonium qubits, parametric amplifiers, and a novel fast DC
                 controlled two-qubit gate.
             </p>
         </small>
@@ -477,6 +398,8 @@
                 targeting them. The introduction of this machine dovetails with ongoing development of
                 quantum computing technology, and makes possible portable descriptions of recent
                 classical/quantum algorithms.
+                This instruction set architecture is the basis for the quantum programming platform
+                 <a href="http://forest.rigetti.com">Forest</a>.
             </p>
         </small>
 
@@ -490,18 +413,8 @@
             <p class="blocktext abstract">
                 4 August, 2016
                 <br><br>
-                We propose a new application of quantum computing to the field of natural
-                language processing. Ongoing work in this field attempts to incorporate
-                grammatical structure into algorithms that compute meaning. In (Coecke,
-                Sadrzadeh and Clark, 2010), the authors introduce such a model (the CSC model)
-                based on tensor product composition. While this algorithm has many advantages,
-                its implementation is hampered by the large classical computational resources
-                that it requires. In this work we show how computational shortcomings of the CSC
-                approach could be resolved using quantum computation (possibly in addition to
-                existing techniques for dimension reduction). We address the value of quantum
-                RAM (Giovannetti,2008) for this model and extend an algorithm from Wiebe, Braun
-                and Lloyd (2012) into a quantum algorithm to categorize sentences in CSC. Our new
-                algorithm demonstrates a quadratic speedup over classical methods under certain conditions.
+                We introduce an algorithm for compositional natural language processing that can be accelerated
+                quadratically by quantum computation.
             </p>
         </small>
 
@@ -518,18 +431,9 @@
                 <br><br>
                 Baltimore, MD -
                 APS March Meeting 2016 <br>
-                Gauge color codes are topological quantum error correcting codes on three dimensional
-                lattices. They have garnered recent interest due to two important properties: (1) they
-                admit a universal transversal gate set, and (2) their structure allows reliable error
-                correction using syndrome data obtained from a measurement circuit of constant depth.
-                Both of these properties make gauge color codes intriguing candidates for low overhead
-                fault-tolerant quantum computation. Recent work by Brown et al. calculated a threshold
-                of ~0.31\% for a particular gauge color code lattice using a simple clustering decoder
-                and phenomenological noise. We show that we can achieve improved threshold error rates
-                using the efficient Wootton and Loss Markov-chain Monte Carlo (MCMC) decoding. In the
-                case of the surface code, the MCMC decoder produced a threshold close to that code's
-                upper bound. While no upper bound is known for gauge color codes, the thresholds we
-                present here may give a better estimate.
+                Gauge color codes are particularly interesting quantum error correcting codes because the admit a
+                universal logical gate set through gauge fixing. We study the threshold of gauge color codes using
+                Markov-chain Monte Carlo decoding.
             </p>
         </small>
 
@@ -546,22 +450,11 @@
                 Quantum information brings together theories of physics and computer science. This
                 synthesis challenges the basic intuitions of both fields. In this thesis, we show that
                 adopting a unified and general language for process theories advances foundations and
-                practical applications of quantum information. Our first set of results analyze quantum
-                algorithms with a process theoretic structure. We contribute new constructions of the Fourier
-                transform and Pontryagin duality in dagger symmetric monoidal categories. We then use this
-                setting to study generalized unitary oracles and give a new quantum blackbox algorithm for
-                the identification of group homomorphisms, solving the GROUPHOMID problem. In the remaining
-                section, we construct a novel model of quantum blackbox algorithms in non-deterministic
-                classical computation. Our second set of results concerns quantum foundations. We complete
-                work begun by Coecke et al., definitively connecting the Mermin non-locality of a process
-                theory with a simple algebraic condition on that theory's phase groups. This result allows
-                us to offer new experimental tests for Mermin non-locality and new protocols for quantum secret
-                sharing. In our final chapter, we exploit the shared process theoretic structure of quantum
-                information and distributional compositional linguistics. We propose a quantum algorithm adapted
-                from Weibe et al. to classify sentences by meaning. The clarity of the process theoretic setting
-                allows us to recover a speedup that is lost in the naive application of the algorithm. The main
-                mathematical tools used in this thesis are group theory (esp. Fourier theory on finite groups),
-                monoidal category theory, and categorical algebra.
+                practical applications of quantum information. Results include new blackbox quantum algorithms,
+                generalized quantum secret sharing and contextuality protocols, a categorical analysis of the
+                Fourier transform in process theories, and an algorithm for natural language processing with a quantum
+                computer. The main mathematical tools used in this thesis are group theory (esp. Fourier theory on
+                finite groups), monoidal category theory, and categorical algebra.
             </p>
         </small>
 
@@ -575,17 +468,10 @@
             <p class="blocktext abstract">
                 23 November, 2015
                 <br><br>
-                Recent work on the logical structure of non-locality has constructed scenarios
-                where observations of multi-partite systems cannot be adequately described by
-                compositions of non-signaling subsystems. In this paper we apply these frameworks
-                to economics. First we construct a empirical model of choice, where choices are
-                understood as observable outcomes in a certain sense. An analysis of contextuality
-                within this framework allows us to characterize which scenarios allow for the possible
-                construction of an adequate global choice rule. In essence, we mathematically
-                characterize when it makes sense to consider the choices of a group as composed of
-                individual choices. We then map out the logical space of some relevant empirical
-                principles, relating properties of these contextual choice scenarios to no-signalling
-                theories and to the weak axiom of revealed preference.
+                This work applies contextuality (a mathematical formalism developed in quantum mechanics)
+                to models of social choice theory. In essence, we mathematically characterize when it makes sense to
+                consider the choices of a group as composed of individual choices, finding an interesting link between
+                no-signaling theories and the weak axiom of revealed preference.
             </p>
         </small>
 
@@ -662,13 +548,9 @@
                 Quantum Physics and Logic (
                 <a href="http://www-mmm.is.s.u-tokyo.ac.jp/qpl2014/" target="_blank">QPL</a>
                 ) 2014 <br><br>
-                We show that a pair of complementary dagger-Frobenius algebras, equipped with a
-                self-conjugate comonoid homomorphism onto one of the algebras, produce a nontrivial
-                unitary morphism on the product of the algebras. This gives an abstract
-                understanding of the structure of an oracle in a quantum computation, and we apply
-                this understanding to develop a new algorithm for the deterministic identification
-                of group homomorphisms into abelian groups. We also discuss an application to the
-                categorical theory of signal-flow networks.
+                This paper studies the categorical structure of quantum algorithms with oracles to develop a new
+                algorithm for the deterministic identification of group homomorphisms into abelian groups. We also
+                discuss an application to the categorical theory of signal-flow networks.
             </p>
         </small>
 
