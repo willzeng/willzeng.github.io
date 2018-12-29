@@ -2,56 +2,12 @@
 
 <html>
 
+
 <head>
     <title>W. J. Zeng</title>
     <!-- CSS -->
-    <style>
-        p {
-            font-family: "Lucida Console", Monaco, monospace;
-            font-size: 13px;
-            line-height: 24px;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        p.blocktext {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 85vw;
-        }
-
-        p.blocktext.abstract {
-            line-height:16px;
-        }
-
-        h1 {
-            font-family: "Lucida Console", Monaco, monospace;
-        }
-
-        a:hover {
-            text-decoration: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 1);
-        }
-
-        .videoWrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            padding-top: 25px;
-            height: 0;
-        }
-        .videoWrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .responsive {
-            width: 100%;
-            height: auto;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 
     <!-- Google Analytics -->
     <script>
@@ -73,34 +29,41 @@
 </head>
 
 <body>
-    <center>
-        <h1 style="padding-top:2ex">W. J. ZENG</h1>
-    </center>
-    <p class="blocktext">
-        <!-- About -->
-        I work on research, product and strategy at
-        <a href="http://rigetti.com" target="_blank">rigetti</a> quantum
-        computing. I am focused on quantum computer architecture, quantum software
-        and algorithm engineering, and making quantum computing <i>useful</i>.
-        <br>
+    <h1>W. J. ZENG</h1>
+    <!-- Links --> |
+    <a href="https://twitter.com/wjzeng" target="_blank">twitter</a> |
+    <a href="https://www.linkedin.com/in/zengwill/" target="_blank">linkedin </a> |
+    <a href="https://arxiv.org/a/zeng_w_1.html" target="_blank">arXiv</a> |
+    <a href="https://goo.gl/cLuZij" target="_blank">currently listening</a> |
+    <a href="http://unitary.fund" target="_blank">unitary fund</a> |
+    <br><br>
 
-        <!-- Links --> |
-        <a href="https://twitter.com/wjzeng" target="_blank">twitter</a> |
-        <a href="https://www.linkedin.com/in/zengwill/" target="_blank">linkedin </a> |
-        <a href="https://arxiv.org/a/zeng_w_1.html" target="_blank">arXiv</a> |
-        <a href="https://goo.gl/cLuZij" target="_blank">currently listening</a> |
-        <a href="http://unitary.fund" target="_blank">unitary fund</a> |
-        <br><br>
+    <!-- About -->
+    <p><strong>I work to make quantum computing useful, sooner, and for more people. </strong>
+        My tools are quantum computer architecture and quantum software/algorithm
+        engineering.
+    </p>
 
-        I am product lead for the
+    <p>Until recently, I was at <a href="http://rigetti.com" target="_blank">rigetti</a> quantum
+        computing, where I worked on topics across research, product and strategy. I was product lead for
+        building and launching rigetti's quantum cloud service using it's superconducting QPUs and the
+        <a href="http://forest.rigetti.com" target="_blank">forest</a>
+        quantum programming toolkit.
+    </p>
+
+    <p><strong>I'm now working on something new. More to come :)</strong>
+    </p>
+
+    <p>I run the <a href="http://unitary.fund">unitary fund</a> to support open source
+        quantum programming with grants.
+        I was co-founder of the
         <a href="http://forest.rigetti.com" target="_blank">forest</a>
         experimental quantum programming toolkit, including the open source libraries
         <a href="https://github.com/rigetticomputing/pyquil" target="_blank">pyquil</a>
         and
-        <a href="https://github.com/rigetticomputing/grove" target="_blank">grove</a>.
-        I run the <a href="http://unitary.fund">unitary fund</a> to support open source
-        quantum programming with grants.
-        My
+        <a href="https://github.com/rigetticomputing/grove" target="_blank">grove</a>. My
+        quantum instruction set of choice is
+        <a href="https://arxiv.org/abs/1608.03355" target="_blank">Quil</a>. My
         <a href="http://arxiv.org/abs/1512.08062" target="_blank"> phd thesis</a>
         at oxford applies abstract methods (mainly from categorical algebra) to the
         study of quantum algorithms and protocols. Before that I worked with superconducting
@@ -108,533 +71,478 @@
         <a href="http://qulab.eng.yale.edu/" target="_blank">yale</a>
         and
         <a href="http://www.qudev.ethz.ch/" target="_blank">eth zurich.</a>
-        <br>
+    </p>
 
-        If you want to learn more about how to get started with quantum computing, I've written a
+    <p>If you want to learn more about how to get started with quantum computing, I've written a
         short introduction, which is part of the
-        <a href="http://pyquil.readthedocs.io/en/latest/intro_to_qc.html"> documentation for
-            pyQuil.</a>
+        <a href="http://pyquil.readthedocs.io/en/latest/intro_to_qc.html"> documentation for pyQuil.</a>
+        I'd also recommend this
+        <a href="https://skillsmatter.com/skillscasts/11929-programming-the-world-s-first-quantum-computers-using-forest"
+           target="_blank">video lecture</a> on modern quantum programming.
     </p>
 
 
     <!-- Posts -->
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Introducing the Unitary Fund: Get $2,000 for your open source quantum computing project</b>
+        <h2>Introducing the Unitary Fund: Get $2,000 for your open source quantum computing project</h2>
         [<a href="https://medium.com/@wjzeng/the-unitary-fund-get-2-000-for-your-open-source-quantum-computing-project-d4b4c76ba177"
             target="_blank">Medium</a>]
         [<a href="http://unitary.fund">unitary.fund</a>]
         [<a href="https://www.computerworld.com.au/article/643108/fund-launched-open-source-quantum-software-devs/">coverage</a>]
-
-    </a>
     </p>
-        <small>
-            <p class="blocktext abstract">
-                24 June, 2018
-                <br><br>
-                I'm starting a new experiment called the <a href="http://unitary.fund"> Unitary Fund</a>:
-                accepting proposals now to get $2,000 for your open source quantum computing project.
-            </p>
-        </small>
+        <p class="abstract">
+            24 June, 2018
+            <br><br>
+            I'm starting a new experiment called the <a href="http://unitary.fund"> Unitary Fund</a>:
+            accepting proposals now to get $2,000 for your open source quantum computing project.
+        </p>
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Programming the world's first quantum computers using Forest</b>
+        <h2>Programming the world's first quantum computers using Forest</h2>
         [<a href="https://skillsmatter.com/skillscasts/11929-programming-the-world-s-first-quantum-computers-using-forest"
             target="_blank">video</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                9 May, 2018 at Skillsmatter, London
-                <br><br>
-                This talk is an introduction to modern quantum programming. It covers why you might
-                want to program a quantum computer and how you would do so today. The only background
-                assumed is linear algebra and complex numbers at the level of undergraduate computer science.
-            </p>
-            <a href="https://skillsmatter.com/skillscasts/11929-programming-the-world-s-first-quantum-computers-using-forest"
-            target="_blank">
-                <img src="shared/qc_math.png" alt="Quantum computing framework" class="responsive">
-            </a>
-        </small>
+    <p class="abstract">
+            9 May, 2018 at Skillsmatter, London
+            <br><br>
+            This talk is an introduction to modern quantum programming. It covers why you might
+            want to program a quantum computer and how you would do so today. The only background
+            assumed is linear algebra and complex numbers at the level of undergraduate computer science.
+    </p>
+    <a href="https://skillsmatter.com/skillscasts/11929-programming-the-world-s-first-quantum-computers-using-forest"
+    target="_blank">
+        <img src="shared/qc_math.png" width="640px" height="320px" alt="Quantum computing framework" class="responsive">
+    </a>
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>The Arrival of Quantum Computing</b>
+        <h2>The Arrival of Quantum Computing</h2>
         [<a href="http://willzeng.com/shared/ImpactTechTalk.pdf"
             target="_blank">slides</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                19 April, 2018 at Impact.Tech
-                <br><br>
-                This talk is an introduction to quantum computing. Part 1 introduces the technology
-                and Part 2 introduces the industry. It covers how you may get involved as a scientist,
-                 programmer, entrepreneur, or investor.
-            </p>
-        </small>
+    <p class="blocktext abstract">
+        19 April, 2018 at Impact.Tech
+        <br><br>
+        This talk is an introduction to quantum computing. Part 1 introduces the technology
+        and Part 2 introduces the industry. It covers how you may get involved as a scientist,
+         programmer, entrepreneur, or investor.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Forest 1.3: Upgraded developer tools, improved stability, and faster execution</b>
+        <h2>Forest 1.3: Upgraded developer tools, improved stability, and faster execution</h2>
         [<a href="https://medium.com/rigetti/forest-1-3-upgraded-developer-tools-improved-stability-and-faster-execution-561b8b44c875"
             target="_blank">blogpost</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                22 February, 2017
-                <br><br>
-                In December, the team at Rigetti became the first to solve an unsupervised machine
-                learning problem on a gate model quantum computer. We did this by connecting one of
-                our recent superconducting quantum processors, a 19-qubit system, to our software
-                platform, Forest. In the ten weeks since then, researchers have already used Forest
-                to train neural networks, program benchmarking games, and simulate nuclear physics.
-                <br><br>
-                Starting today, researchers using Forest will be upgraded to version 1.3, which
-                provides better tools for optimizing and debugging quantum programs. The upgrade
-                also provides greater stability in our quantum processor (QPU), which will let
-                researchers run more powerful quantum programs...
-            </p>
-        </small>
+    <p class="abstract">
+        22 February, 2017
+        <br><br>
+        In December, the team at Rigetti became the first to solve an unsupervised machine
+        learning problem on a gate model quantum computer. We did this by connecting one of
+        our recent superconducting quantum processors, a 19-qubit system, to our software
+        platform, Forest. In the ten weeks since then, researchers have already used Forest
+        to train neural networks, program benchmarking games, and simulate nuclear physics.
+        <br><br>
+        Starting today, researchers using Forest will be upgraded to version 1.3, which
+        provides better tools for optimizing and debugging quantum programs. The upgrade
+        also provides greater stability in our quantum processor (QPU), which will let
+        researchers run more powerful quantum programs...
+    </p>
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Easy, Hybrid Quantum Programming with Forest</b>
+        <h2>Easy, Hybrid Quantum Programming with Forest</h2>
         [<a href="https://collegerama.tudelft.nl/Mediasite/Showcase/qip2018/Presentation/7d528027327d4b9ea3fa2c7f95417a521d"
             target="_blank">video</a>]
         #talk <br>
-        <p class="videoWrapper">
-            <iframe width="320" height="240" frameborder="0" scrolling="auto" marginheight="0"
+        <p class="video-container">
+            <iframe width="640" height="480" frameborder="0" scrolling="auto" marginheight="0"
                     marginwidth="0" src="https://collegerama.tudelft.nl/Mediasite/Play/7d528027327d4b9ea3fa2c7f95417a521d?playfrom=0&player=0381c08c03db488d8bdbd4a5dfd3478b0a">
             </iframe>
         </p>
     </p>
-        <small>
-            <p class="blocktext abstract">
-                14 January, 2018
-                <br>
-                <a href="https://qutech.nl/qip2018/">QIP2018</a>, Delft, Netherlands <br><br>
-                The first scalable universal quantum computers are now available, such as the 19
-                qubit processor built by Rigetti Computing. As these devices mature, it is
-                important to consider how best to make use of them. This requires new and applied
-                programming models for quantum computing. In particular, promising near-term
-                algorithms for quantum simulation, optimization, and machine learning require a
-                hybrid quantum/classical programming environment. In this talk, we introduce a
-                freely available open-source environment (<a href="http://forest.rigetti.com">Forest</a>)
-                based on a shared-memory intermediate representation
-                (<a href="https://arxiv.org/abs/1608.03355"> Quil</a>) that is optimized for
-                this hybrid model. The environment runs through a cloud API with client-side Python
-                libraries that target both superconducting quantum circuit and classical simulation
-                backends. We will share how to get started with Forest, as well as how to do
-                research with example hybrid algorithms using a quantum computer.
-            </p>
-        </small>
+    <p class="abstract">
+        14 January, 2018
+        <br>
+        <a href="https://qutech.nl/qip2018/">QIP2018</a>, Delft, Netherlands <br><br>
+        The first scalable universal quantum computers are now available, such as the 19
+        qubit processor built by Rigetti Computing. As these devices mature, it is
+        important to consider how best to make use of them. This requires new and applied
+        programming models for quantum computing. In particular, promising near-term
+        algorithms for quantum simulation, optimization, and machine learning require a
+        hybrid quantum/classical programming environment. In this talk, we introduce a
+        freely available open-source environment (<a href="http://forest.rigetti.com">Forest</a>)
+        based on a shared-memory intermediate representation
+        (<a href="https://arxiv.org/abs/1608.03355"> Quil</a>) that is optimized for
+        this hybrid model. The environment runs through a cloud API with client-side Python
+        libraries that target both superconducting quantum circuit and classical simulation
+        backends. We will share how to get started with Forest, as well as how to do
+        research with example hybrid algorithms using a quantum computer.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Unsupervised Machine Learning on Rigetti 19Q with Forest 1.2</b>
+        <h2>Unsupervised Machine Learning on Rigetti 19Q with Forest 1.2</h2>
         [<a href="https://medium.com/rigetti/unsupervised-machine-learning-on-rigetti-19q-with-forest-1-2-39021339699"
             target="_blank">blogpost</a>]
         [<a href="https://arxiv.org/abs/1712.05771"
-            target="_blank">arXiv</a>
+            target="_blank">arXiv</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                18 December, 2017
-                <br><br>
-                We are excited to share that our team has demonstrated unsupervised machine learning 
-                using 19Q, our new 19-qubit general purpose superconducting quantum processor. We did 
-                this with a quantum/classical hybrid algorithm for clustering developed at Rigetti...
-            </p>
-        </small>
+    <p class="abstract">
+        18 December, 2017
+        <br><br>
+        We are excited to share that our team has demonstrated unsupervised machine learning
+        using 19Q, our new 19-qubit general purpose superconducting quantum processor. We did
+        this with a quantum/classical hybrid algorithm for clustering developed at Rigetti...
+    </p>
 
     
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Nature Comment: First Quantum Computers Need Smart Software</b>
+        <h2>Nature Comment: First Quantum Computers Need Smart Software</h2>
         [<a href="https://www.nature.com/news/first-quantum-computers-need-smart-software-1.22590"
             target="_blank">Nature</a>] [<a href="http://www.nature.com/nature/podcast/index-2017-09-14.html"
             target="_blank">podcast</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                13 September, 2017
-                <br><br>
-                We outline three developments that are needed over the next five years to ensure
-                that the first quantum computers can be programmed to perform useful tasks. First,
-                developers must think in terms of 'hybrid' approaches that combine classical and
-                quantum processors. For example, at Rigetti we have developed an interface called
-                Quil, which includes a set of basic instructions for managing quantum gates and
-                classical processors and for reading and writing to and from shared memory. Second,
-                researchers and engineers must build and use open-source software for
-                quantum computing applications. Third, scientists need to establish a
-                quantum programming community to nurture an ecosystem of software. This community
-                must be interdisciplinary, inclusive and focused on applications.
-            </p>
-        </small>
+    <p class="abstract">
+        13 September, 2017
+        <br><br>
+        We outline three developments that are needed over the next five years to ensure
+        that the first quantum computers can be programmed to perform useful tasks. First,
+        developers must think in terms of 'hybrid' approaches that combine classical and
+        quantum processors. For example, at Rigetti we have developed an interface called
+        Quil, which includes a set of basic instructions for managing quantum gates and
+        classical processors and for reading and writing to and from shared memory. Second,
+        researchers and engineers must build and use open-source software for
+        quantum computing applications. Third, scientists need to establish a
+        quantum programming community to nurture an ecosystem of software. This community
+        must be interdisciplinary, inclusive and focused on applications.
+    </p>
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Rigetti Partners with CDL to Drive Quantum Machine Learning</b>
+        <h2>Rigetti Partners with CDL to Drive Quantum Machine Learning</h2>
         [<a href="https://medium.com/rigetti/rigetti-partners-with-cdl-to-drive-quantum-machine-learning-25e439c353"
             target="_blank">blogpost</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                24 August, 2017
-            </p>
-        </small>
+    <p class="abstract">
+        24 August, 2017
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Demonstration of Universal Parametric Entangling Gates on a Multi-Qubit Lattice</b>
+        <h2>Demonstration of Universal Parametric Entangling Gates on a Multi-Qubit Lattice</h2>
         [<a href="https://arxiv.org/abs/1706.06570" target="_blank">arXiv</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                20 June, 2017
-                <br><br>
-                Demonstration of entangling gates on the Rigetti 8Q processor. This was the first process ever made
-                available through Forest.
-            </p>
-        </small>
+    <p class="abstract">
+        20 June, 2017
+        <br><br>
+        Demonstration of entangling gates on the Rigetti 8Q processor. This was the first process ever made
+        available through Forest.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Parametrically-Activated Entangling Gates Using Transmon Qubits</b>
+        <h2>Parametrically-Activated Entangling Gates Using Transmon Qubits</h2>
         [<a href="https://arxiv.org/abs/1706.06562" target="_blank">arXiv</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                20 June, 2017
-                <br><br>
-                Parametric entangling gates developed for the Rigetti 8Q processor.
-            </p>
-        </small>
+    <p class="abstract">
+        20 June, 2017
+        <br><br>
+        Parametric entangling gates developed for the Rigetti 8Q processor.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Architectures for Hybrid Quantum/Classical Computing</b>
+        <h2>Architectures for Hybrid Quantum/Classical Computing</h2>
         [<a href="http://willzeng.com/shared/ORNL_Zeng_05252017.pdf" target="_blank">slides</a>]
         #talk
     </p>
-        <small>
-            <p class="blocktext abstract">
-                22 May, 2017
-                <br><br>
-                Quantum Computing Institute Seminar, Oak Ridge National Lab, TN
-                <br>
-                In this talk, we introduce an
-                open-source environment (<a href="http://forest.rigetti.com">Forest</a>) based on a
-                shared-memory intermediate
-                representation (<a href="https://arxiv.org/abs/1608.03355" target="_blank">Quil</a>).
-                The environment runs through a cloud API with client-side
-                Python libraries that can target both superconducting quantum circuit and classical
-                simulation backends.  We discuss the programming model and implementations of
-                the <a href="http://grove-docs.readthedocs.io/en/latest/qaoa.html" target="_blank">
-                Quantum Approximate Optimization Algorithm</a> in this environment.
-            </p>
-        </small>
+    <p class="abstract">
+        22 May, 2017
+        <br><br>
+        Quantum Computing Institute Seminar, Oak Ridge National Lab, TN
+        <br>
+        In this talk, we introduce an
+        open-source environment (<a href="http://forest.rigetti.com">Forest</a>) based on a
+        shared-memory intermediate
+        representation (<a href="https://arxiv.org/abs/1608.03355" target="_blank">Quil</a>).
+        The environment runs through a cloud API with client-side
+        Python libraries that can target both superconducting quantum circuit and classical
+        simulation backends.  We discuss the programming model and implementations of
+        the <a href="http://grove-docs.readthedocs.io/en/latest/qaoa.html" target="_blank">
+        Quantum Approximate Optimization Algorithm</a> in this environment.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>A Practical Quantum Programming Workshop</b>
+        <h2>A Practical Quantum Programming Workshop</h2>
         [<a href="https://www.youtube.com/watch?v=IpoASc18P5Q&feature=youtu.be" target="_blank">video</a>]
         #talk <br>
-        <p class="videoWrapper">
+        <p class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/IpoASc18P5Q" frameborder="0" allowfullscreen>
             </iframe>
         </p>
     </p>
-        <small>
-            <p class="blocktext abstract">
-                16 January, 2017
-                <br>
-                <a href="https://stationq.microsoft.com/qip-2017/">QIP2017</a>, Seattle, WA <br><br>
-                This was the original QIP workshop that introduced
-                <a href="http://forest.rigetti.com">Forest</a>,
-                an open source quantum programming toolkit targeting near-term
-                applications and devices. It is based on the Quil instruction set and introduces the libraries
-                <a href="http://github.com/rigetticomputing/pyquil/">pyQuil</a> and
-                <a href="http://github.com/rigetticomputing/grove/">grove</a>.
-            </p>
-        </small>
+    <p class="abstract">
+        16 January, 2017
+        <br>
+        <a href="https://stationq.microsoft.com/qip-2017/">QIP2017</a>, Seattle, WA <br><br>
+        This was the original QIP workshop that introduced
+        <a href="http://forest.rigetti.com">Forest</a>,
+        an open source quantum programming toolkit targeting near-term
+        applications and devices. It is based on the Quil instruction set and introduces the libraries
+        <a href="http://github.com/rigetticomputing/pyquil/">pyQuil</a> and
+        <a href="http://github.com/rigetticomputing/grove/">grove</a>.
+    </p>
 
-
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Quantum Programming on Near-term Devices</b>
+        <h2>Quantum Programming on Near-term Devices</h2>
         [<a href="http://willzeng.com/shared/QuantumProgrammingMURITalk_2015.pdf" target="_blank">slides</a>]
         #talk
     </p>
-        <small>
-            <p class="blocktext abstract">
-                29 November, 2016
-                <br><br>
-                Simons Institute, University of Berkeley, CA -
-                Invited talk at the Semantics, Formal Reasoning, and Tools for Quantum Programming
-                <a href="http://www.cs.tulane.edu/quantum/" target="_blank">MURI Review</a>.
-            </p>
-        </small>
+    <p class="abstract">
+        29 November, 2016
+        <br><br>
+        Simons Institute, University of Berkeley, CA -
+        Invited talk at the Semantics, Formal Reasoning, and Tools for Quantum Programming
+        <a href="http://www.cs.tulane.edu/quantum/" target="_blank">MURI Review</a>.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>A Functional Architecture for Scalable Quantum Computing</b>
+        <h2>A Functional Architecture for Scalable Quantum Computing</h2>
         [<a href="http://ieeexplore.ieee.org/document/7738703/" target="_blank">IEEE</a>]
         [<a href="http://willzeng.com/shared/functional_architecture_final_ICRC.pdf" target="_blank">direct download</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                17 October, 2016
-                <br><br>
-                We describe a scalable functional architecture for superconducting quantum computation, based on a
-                planar lattice of transmon and fluxonium qubits, parametric amplifiers, and a novel fast DC
-                controlled two-qubit gate.
-            </p>
-        </small>
+    <p class="abstract">
+        17 October, 2016
+        <br><br>
+        We describe a scalable functional architecture for superconducting quantum computation, based on a
+        planar lattice of transmon and fluxonium qubits, parametric amplifiers, and a novel fast DC
+        controlled two-qubit gate.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>A Practical Quantum Instruction Set Architecture</b>
+        <h2>A Practical Quantum Instruction Set Architecture</h2>
         [<a href="https://arxiv.org/abs/1608.03355" target="_blank">arXiv</a>]
         [<a href="https://medium.com/@rigetticomputing/introducing-quil-a-practical-quantum-instruction-set-architecture-a684f0590a0c#.ykdjofqqb" target="_blank">blogpost</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                11 August, 2016
-                <br><br>
-                We introduce an abstract machine architecture for classical/quantum
-                computations---including compilation---along with a quantum instruction
-                language called Quil for explicitly writing these computations. With this formalism,
-                we discuss concrete implementations of the machine and non-trivial algorithms
-                targeting them. The introduction of this machine dovetails with ongoing development of
-                quantum computing technology, and makes possible portable descriptions of recent
-                classical/quantum algorithms.
-                This instruction set architecture is the basis for the quantum programming platform
-                 <a href="http://forest.rigetti.com">Forest</a>.
-            </p>
-        </small>
+    <p class="abstract">
+        11 August, 2016
+        <br><br>
+        We introduce an abstract machine architecture for classical/quantum
+        computations---including compilation---along with a quantum instruction
+        language called Quil for explicitly writing these computations. With this formalism,
+        we discuss concrete implementations of the machine and non-trivial algorithms
+        targeting them. The introduction of this machine dovetails with ongoing development of
+        quantum computing technology, and makes possible portable descriptions of recent
+        classical/quantum algorithms.
+        This instruction set architecture is the basis for the quantum programming platform
+         <a href="http://forest.rigetti.com">Forest</a>.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Quantum Algorithms for Compositional Natural Language Processing</b>
+        <h2>Quantum Algorithms for Compositional Natural Language Processing</h2>
         [<a href="https://arxiv.org/abs/1608.01406" target="_blank">EPTCS</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                4 August, 2016
-                <br><br>
-                We introduce an algorithm for compositional natural language processing that can be accelerated
-                quadratically by quantum computation.
-            </p>
-        </small>
+    <p class="abstract">
+        4 August, 2016
+        <br><br>
+        We introduce an algorithm for compositional natural language processing that can be accelerated
+        quadratically by quantum computation.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>High-threshold decoding algorithms for the gauge color code</b>
+        <h2>High-threshold decoding algorithms for the gauge color code</h2>
         [<a href="http://willzeng.com/shared/MCMC_GCC_aps2015.pdf" target="_blank">slides</a>]
         #talk
     </p>
-        <small>
-            <p class="blocktext abstract">
-                16 March, 2016
-                <br><br>
-                Baltimore, MD -
-                APS March Meeting 2016 <br>
-                Gauge color codes are particularly interesting quantum error correcting codes because the admit a
-                universal logical gate set through gauge fixing. We study the threshold of gauge color codes using
-                Markov-chain Monte Carlo decoding.
-            </p>
-        </small>
+    <p class="abstract">
+        16 March, 2016
+        <br><br>
+        Baltimore, MD -
+        APS March Meeting 2016 <br>
+        Gauge color codes are particularly interesting quantum error correcting codes because the admit a
+        universal logical gate set through gauge fixing. We study the threshold of gauge color codes using
+        Markov-chain Monte Carlo decoding.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>The Abstract Structure of Quantum Algorithms</b>
+        <h2>The Abstract Structure of Quantum Algorithms</h2>
         [<a href="https://arxiv.org/abs/1512.08062" target="_blank">Oxford Thesis</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                26 December, 2015
-                <br><br>
-                Quantum information brings together theories of physics and computer science. This
-                synthesis challenges the basic intuitions of both fields. In this thesis, we show that
-                adopting a unified and general language for process theories advances foundations and
-                practical applications of quantum information. Results include new blackbox quantum algorithms,
-                generalized quantum secret sharing and contextuality protocols, a categorical analysis of the
-                Fourier transform in process theories, and an algorithm for natural language processing with a quantum
-                computer. The main mathematical tools used in this thesis are group theory (esp. Fourier theory on
-                finite groups), monoidal category theory, and categorical algebra.
-            </p>
-        </small>
+    <p class="abstract">
+        26 December, 2015
+        <br><br>
+        Quantum information brings together theories of physics and computer science. This
+        synthesis challenges the basic intuitions of both fields. In this thesis, we show that
+        adopting a unified and general language for process theories advances foundations and
+        practical applications of quantum information. Results include new blackbox quantum algorithms,
+        generalized quantum secret sharing and contextuality protocols, a categorical analysis of the
+        Fourier transform in process theories, and an algorithm for natural language processing with a quantum
+        computer. The main mathematical tools used in this thesis are group theory (esp. Fourier theory on
+        finite groups), monoidal category theory, and categorical algebra.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Contextuality and the Weak Axiom in the Theory of Choice</b>
+        <h2>Contextuality and the Weak Axiom in the Theory of Choice</h2>
         [<a href="https://arxiv.org/abs/1512.02668" target="_blank">Proc. Quantum Inter.</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                23 November, 2015
-                <br><br>
-                This work applies contextuality (a mathematical formalism developed in quantum mechanics)
-                to models of social choice theory. In essence, we mathematically characterize when it makes sense to
-                consider the choices of a group as composed of individual choices, finding an interesting link between
-                no-signaling theories and the weak axiom of revealed preference.
-            </p>
-        </small>
+    <p class="abstract">
+        23 November, 2015
+        <br><br>
+        This work applies contextuality (a mathematical formalism developed in quantum mechanics)
+        to models of social choice theory. In essence, we mathematically characterize when it makes sense to
+        consider the choices of a group as composed of individual choices, finding an interesting link between
+        no-signaling theories and the weak axiom of revealed preference.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>The Quantum Software Challenge</b>
+        <h2>The Quantum Software Challenge</h2>
         [<a href="https://medium.com/@rigetticomputing/the-quantum-software-challenge-1a86eec1ce47#.275n8ufgk" target="_blank">Medium</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                19 October, 2015
-                <br><br>
-                What software engineers should know about quantum computing...
-            </p>
-        </small>
+    <p class="abstract">
+        19 October, 2015
+        <br><br>
+        What software engineers should know about quantum computing...
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Diagrammatic Methods for the Specifcation and Verifcation of Quantum Algorithms</b>
+        <h2>Diagrammatic Methods for the Specifcation and Verifcation of Quantum Algorithms</h2>
         [<a href="http://willzeng.com/shared/qcircuitworkshop.pdf" target="_blank">slides</a>] #talk
     </p>
-        <small>
-            <p class="blocktext abstract">
-                9 June, 2015 <br><br>
-                Institute for Quantum Computing, University of Waterloo -
-                Quantum Programming and Circuits Workshop
-            </p>
-        </small>
+    <p class="abstract">
+        9 June, 2015 <br><br>
+        Institute for Quantum Computing, University of Waterloo -
+        Quantum Programming and Circuits Workshop
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>sticks</b>
+        <h2>sticks</h2>
         [<a href="https://medium.com/@wjzeng/sticks-1d50f0686b64#.syc7081nc" target="_blank">Medium</a>] #fiction
     </p>
-        <small>
-            <p class="blocktext abstract">
-                7 Feburary, 2015
-                <br><br>
-                In earlier years, we would hold small angled sticks...
-            </p>
-        </small>
+    <p class="abstract">
+        7 Feburary, 2015
+        <br><br>
+        In earlier years, we would hold small angled sticks...
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>see</b>
+        <h2>see</h2>
         [<a href="https://medium.com/@wjzeng/see-57dab42cfe4b#.a1oj7yrfp" target="_blank">Medium</a>] #fiction
     </p>
-        <small>
-            <p class="blocktext abstract">
-                27 January, 2015
-                <br><br>
-                See that little in the weathered man’s life could match the intensity, the panting rhythms,
-                the speed of the sled dogs...
-            </p>
-        </small>
+    <p class="abstract">
+        27 January, 2015
+        <br><br>
+        See that little in the weathered man’s life could match the intensity, the panting rhythms,
+        the speed of the sled dogs...
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>Abstract structure of unitary oracles for quantum algorithms</b>
+        <h2>Abstract structure of unitary oracles for quantum algorithms</h2>
         [<a href="http://willzeng.com/shared/qpltalk_unitary_2014.pdf" target="_blank">slides</a>]
         [<a href="https://www.youtube.com/watch?v=X0cKqtGjWPY" target="_blank">video</a>]
         [<a href="https://arxiv.org/abs/1406.1278" target="_blank">paper</a>]
         #talk
     </p>
-        <small>
-            <p class="blocktext abstract">
-                6 June, 2014 <br>
-                Kyoto, Japan -
-                Quantum Physics and Logic (
-                <a href="http://www-mmm.is.s.u-tokyo.ac.jp/qpl2014/" target="_blank">QPL</a>
-                ) 2014 <br><br>
-                This paper studies the categorical structure of quantum algorithms with oracles to develop a new
-                algorithm for the deterministic identification of group homomorphisms into abelian groups. We also
-                discuss an application to the categorical theory of signal-flow networks.
-            </p>
-        </small>
+    <p class="abstract">
+        6 June, 2014 <br>
+        Kyoto, Japan -
+        Quantum Physics and Logic (
+        <a href="http://www-mmm.is.s.u-tokyo.ac.jp/qpl2014/" target="_blank">QPL</a>
+        ) 2014 <br><br>
+        This paper studies the categorical structure of quantum algorithms with oracles to develop a new
+        algorithm for the deterministic identification of group homomorphisms into abelian groups. We also
+        discuss an application to the categorical theory of signal-flow networks.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>A Subtle Introduction to Category Theory</b>
+        <h2>A Subtle Introduction to Category Theory</h2>
         [<a href="http://willzeng.com/shared/CatIntro.pdf" target="_blank">notes</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                Spring, 2013 <br><br>
-                Some playful notes and riffs on monoidal category theory. Very much a WIP.
-            </p>
-        </small>
+    <p class="abstract">
+        Spring, 2013 <br><br>
+        Some playful notes and riffs on monoidal category theory. Very much a WIP.
+    </p>
 
 
-    <p class="blocktext">
+    <p class="post">
         .................................... <br>
-        <b>For Sale</b>
+        <h2>For Sale</h2>
         [<a href="http://willzeng.com/shared/forsale.pdf" target="_blank">link</a>]
     </p>
-        <small>
-            <p class="blocktext abstract">
-                16 August, 2013 <br><br>
-                A microfiction.
-            </p>
-        </small>
-
-
-    <p class="blocktext">
-        .................................... <br>
-        <b>Rowing</b>
+    <p class="abstract">
+        16 August, 2013 <br><br>
+        A microfiction.
     </p>
-        <small>
-            <p class="blocktext abstract">
-                I've done my fair share of river batting. <br><br>
-                The Oxford-Cambridge Boat Race 2012
-                [<a href="https://en.wikipedia.org/wiki/The_Boat_Race_2012" target="_blank">wiki</a>]
-                <br>
-                    &nbsp Oxford Prepares Videos:
-                    [<a href="https://www.youtube.com/watch?v=mFStVsXqiDc" target="_blank">1</a>]
-                    [<a href="https://www.youtube.com/watch?v=frwFQAS-eaQ" target="_blank">2</a>]
-                    [<a href="https://www.youtube.com/watch?v=XjKB4ZcWTJw" target="_blank">3</a>]
-                    [<a href="https://www.youtube.com/watch?v=tgsjpyrkRWk" target="_blank">4</a>]
-                    [<a href="https://www.youtube.com/watch?v=0adDTsg7EFU" target="_blank">5</a>]
-                    [<a href="https://www.youtube.com/watch?v=fZCsEx09xWM" target="_blank">6</a>]
-                    [<a href="https://www.youtube.com/watch?v=-vOg59qKrTI" target="_blank">Epilogue</a>]
-                    [<a href="https://www.youtube.com/watch?v=ub-GMijQ08I" target="_blank">Race Highlights</a>]
-                    <br>
-                    &nbsp Media:
-                    [<a href="http://www.nytimes.com/2012/04/09/world/europe/protester-disrupts-oxford-cambridge-boat-race.html"
-                        target="_blank">NYT</a>]
-                    [<a href="https://www.theguardian.com/sport/2012/apr/08/boat-race-protest-reaction"
-                        target="_blank">theguardian</a>]
-                <br><br>
-                IRA National Championships 2011 w/ Yale Lightweight crew
-                    [<a href="https://www.youtube.com/watch?v=ga5U5w0urm8"
-                        target="_blank">video</a>]
-                <br><br>
-            </p>
-        </small>
 
 
-    <p class="blocktext">
+    <p class="post">
+        .................................... <br>
+        <h2>Rowing</h2>
+    </p>
+    <p class="abstract">
+        I've done my fair share of river batting. <br><br>
+        The Oxford-Cambridge Boat Race 2012
+        [<a href="https://en.wikipedia.org/wiki/The_Boat_Race_2012" target="_blank">wiki</a>]
+        <br>
+            &nbsp Oxford Prepares Videos:
+            [<a href="https://www.youtube.com/watch?v=mFStVsXqiDc" target="_blank">1</a>]
+            [<a href="https://www.youtube.com/watch?v=frwFQAS-eaQ" target="_blank">2</a>]
+            [<a href="https://www.youtube.com/watch?v=XjKB4ZcWTJw" target="_blank">3</a>]
+            [<a href="https://www.youtube.com/watch?v=tgsjpyrkRWk" target="_blank">4</a>]
+            [<a href="https://www.youtube.com/watch?v=0adDTsg7EFU" target="_blank">5</a>]
+            [<a href="https://www.youtube.com/watch?v=fZCsEx09xWM" target="_blank">6</a>]
+            [<a href="https://www.youtube.com/watch?v=-vOg59qKrTI" target="_blank">Epilogue</a>]
+            [<a href="https://www.youtube.com/watch?v=ub-GMijQ08I" target="_blank">Race Highlights</a>]
+            <br>
+            &nbsp Media:
+            [<a href="http://www.nytimes.com/2012/04/09/world/europe/protester-disrupts-oxford-cambridge-boat-race.html"
+                target="_blank">NYT</a>]
+            [<a href="https://www.theguardian.com/sport/2012/apr/08/boat-race-protest-reaction"
+                target="_blank">theguardian</a>]
+        <br><br>
+        IRA National Championships 2011 w/ Yale Lightweight crew
+            [<a href="https://www.youtube.com/watch?v=ga5U5w0urm8"
+                target="_blank">video</a>]
+        <br><br>
+    </p>
+
+
+    <p class="post">
         .................................... <br>
         <!-- Twitter Widget -->
         <a class="twitter-timeline" height="1000" width="80wv"
@@ -655,9 +563,7 @@
         </script>
     </p>
 
-    <p class="blocktext">
-        <a href="https://www.youtube.com/watch?v=KX7V7UEVZko">Enjoy. Thanks for coming by.</a>
-    </p>
+    <a href="https://www.youtube.com/watch?v=KX7V7UEVZko">Enjoy. Thanks for coming by.</a>
 
 </body>
 
