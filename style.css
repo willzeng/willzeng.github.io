@@ -1,11 +1,11 @@
 body {
     margin: 0 auto;
-    max-width: 70em;
+    max-width: 48em;
     font-family: "Lucida Console", Monaco, monospace;
     line-height: 1.5;
     padding: 4em 1em;
     color: #566b78;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 h1 {
@@ -20,8 +20,14 @@ h2 {
 h1,
 h2,
 strong {
-    font-weight: 800;
+    font-weight: 1200;
     color: #333;
+}
+
+highlight {
+    font-weight: 1200;
+    color: #333;
+    background-color: #a2dffb;
 }
 
 a {
