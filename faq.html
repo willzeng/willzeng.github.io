@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <title>W. J. Zeng</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+          rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script',
+            'http://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-19932157-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<h1>W. J. ZENG - F.A.Q.</h1>
+<!-- Links -->
+    |
+ <a href="index.html" target="_blank">home</a> |
+<br><br>
+
+Replies to some questions that I am frequently asked.
+<br><br>
+
+<strong>Q: Quantum computing is getting a lot of buzz and money. Has any quantum computer
+so far performed a computation? That is, taken some inputs and given a meaningful (and useful)
+output or response?</strong><br>
+The short answer is yes. Quantum computers have performed meaningful computations, but not
+yet ones that give useful advantage, i.e. ones where using classical computation is outperformed.
+Some examples are
+calculating the ground state energy of molecules
+<a href="https://arxiv.org/abs/1704.05018" target="_blank">[1]</a>
+<a href="https://arxiv.org/abs/2004.04174" target="_blank">[2]</a>
+<a href="https://arxiv.org/abs/2012.00921" target="_blank">[3]</a>,
+MAXCUT optimization
+<a href="https://arxiv.org/abs/1812.01041" target="_blank">[4]</a>, or
+classification tasks
+<a href="https://arxiv.org/abs/2012.04145" target="_blank">[5]</a>
+<a href="https://arxiv.org/abs/1712.05771" target="_blank">[6]</a>.
+While these do give accurate answers for non-trival problems by running on real quantum hardware,
+the instances sizes are still very small.<br><br>
+
+When asking about milestones for quantum computer performance, clear terminology is important.
+I wrote
+<a href="https://medium.com/@wjzeng/clarifying-quantum-supremacy-better-terms-for-milestones-in-quantum-computation-d15ccb53954f" target="_blank">a short, useful taxonomy in this post</a>.
+Recently, an
+<a href="https://www.nature.com/articles/s41586-019-1666-5" target="_blank">example of quantum supremacy was demonstrated</a>,
+which means that some computation was performed
+that would be intractable to perform classically and that - in the computational complexity sense -
+we believe it to be hard for a classical computer and easy for a quantum one. I'd hesitate to say that this was a useful calcuation,
+though it may have application to
+<a href="https://www.quantamagazine.org/how-to-turn-a-quantum-computer-into-the-ultimate-randomness-generator-20190619/" target="_blank">
+    generating certifiable random numbers.</a> I co-wrote a
+<a href="https://medium.com/@sohaib.alam/unpacking-the-quantum-supremacy-benchmark-with-python-67a46709d" target="_blank">short blog post</a>
+about what the supremacy calculation does that covers the main idea using some short Python snippets.
+<br><br>
+
+When it comes to performing a valuable computation, we recently released some work on the required
+resources for derivative pricing
+<a href="https://arxiv.org/abs/2012.03819" target="_blank">[7]</a>
+and there are there are other examples in chemistry
+<a href="https://arxiv.org/abs/2011.03494" target="_blank">[8]</a>
+<a href="https://arxiv.org/abs/1902.10673" target="_blank">[9]</a>
+and prime factorization
+<a href="https://arxiv.org/abs/1905.09749">[10]</a>.
+Note that there is much left to discover in applying quantum computers.
+<strong>I am optimistic that these resource requirements will continue to decrease.</strong>
+
+</body>
+
+</html>
