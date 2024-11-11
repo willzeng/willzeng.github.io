@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <title>W. J. Zeng</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+          rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script',
+            'http://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-19932157-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<h1>Mathematical meaning is not captured by meaning-as-use.</h1>
+<!-- Links -->
+    |
+ <a href="../index.html" target="_blank">home</a> |
+<br><br>
+
+November 11, 2024
+<br><br>
+
+by <a href="https://x.com/klettphoebe" target="_blank">Phoebe Klett</a> and <a href="../index.html" target="_blank">W. J. Zeng</a>
+<br><br>
+
+“<i>The meaning of a word is its use in the language.</i>” - Wittgenstein, Philosophical Investigations
+<br><br>
+Large language models take Wittgenstein’s insight to heart. They learn the meaning of words from their context, i.e. how the words are used in the text (and other data) that form its training set. The recent successes of LLMs seem like a victory for this meaning-as-use approach. The extent to which LLMs can or will understand meaning is the extent to which meaning can be reduced to use-in-context. 
+<br><br>
+But there are languages where LLMs still clearly struggle, namely languages for mathematical and symbolic reasoning. Why is use and context not sufficient to understand this kind of meaning? What meaning of the tokens “5+3 = 8” is not captured in the collection of texts in which they appear? 
+<br><br>
+We propose that meaning-as-use is not sufficient for mathematical meaning. Language is not the real world itself. It is a representation of the world, and so any meaning that LLMs determine is a meaning that comes from compressing and correlating representations. We argue that mathematical reasoning is instead about the world itself (the signified) and not just its representations (the signs). Importantly, our position is directly opposed to the (sometimes common) view that mathematical meaning is captured purely by syntactical manipulations.
+<br><br>
+<i>Mathematical meaning is encoded in the physical world</i>
+<br><br>
+We suggest that the non-use meaning of mathematics is encoded in the physical world. Let’s consider a motivating example. If you pick two large numbers at random and ask a language model to add them, then you are likely to have chosen an instance that it hasn’t seen during training. Likely too, the LLM will give the wrong answer. If you ask the same to a person, they’ll be able to add the numbers mentally up to some size, and then at some point, say 10<sup>2</sup> digits in each number, they’ll reach for a pen and paper. At this point, the response to the addition prompt becomes an interaction between the person and the physical world. This response becomes a computation where the properties of the world (reliable memory of ink on paper, muscle memory of biological arm, conservation of pen ink, etc.) support the meaning of the computation. If you choose really big numbers, say 10<sup>10</sup> digits, then we reach for computers where we find the algorithms and meaning of addition in the complicated physics of silicon transistors. 
+<br><br>
+Similarly, we argue that LLMs need access to the physical world either through embodiment (e.g. robots in the physical world) or through simulation (e.g. automated theorem provers, or Turing-machines encoded on computers) if they are to understand mathematical meaning. 
+<br><br>
+You may object that one does not need to actually add 10<sup>10</sup> digit numbers in order to understand addition. We would agree. Addition was understood by humans long before we built computers capable of practically doing those long computations. However, important to this understanding, is the principal that given sufficient time and sufficient apparatus, those computations could be done by hand. The mathematical understanding relies on the assumption of a stable physical reality to support the computation. This isn’t a statement about the resource complexity of the computation. We don’t in principal need enough food to feed the humans to do the computation. We do in principal need stable physical reality. 
+<br><br>
+Let’s consider what would happen if our assumptions about a stable physical world were violated. Perhaps, unknown to us, there is some fundamental time in the future, say in 10 minutes, that resets the universe back to the big bang. The addition that seems natural in that universe is different from the one that seems natural to us. Beings in that universe would model it differently, perhaps putting addition into a cyclic group. What mathematics might we have learned if we were embodied in this world with periodic resets? 
+<br><br>
+Of course, our natural number addition would still exist in that cyclic world but would seem less appropriate for their everyday counting.
+<br><br>
+While this example doesn’t break us out into different mathematical meaning entirely, it shows that the underlying reality does affect the character of mathematical meaning. Switching between the cyclic time reality and our reality switches which mathematical notion is natural and which is abstract and constructed<sup><a href="#footnote1">1</a></sup>. Fundamentally, mathematics is about the signified and not just the sign. This may be part of the explanation for the “unreasonable effectiveness” of mathematics in modeling the world.<sup><a href="#footnote2">2</a></sup>
+<br><br>
+We aren’t suggesting that neural networks are incapable of learning addition or other mathematical functions. Neural networks can, in theory, approximate any computable function. We are suggesting that the reason they haven’t yet learned addition is that they are not trained properly for this task. The computable function of addition is not wholly contained in the representations of meaning-as-use that comprise today’s training sets. Bigger training sets of math literature won’t get us there either as they are still the wrong type: representations. Mathematical meaning also requires the world itself.
+<br><br>
+<strong>We propose that mathematical meaning is distinct from meaning-as-use because mathematical meaning is encoded in the world itself and not its representations. If we want systems that understand mathematical reasoning, then we must give these systems access to physical reality. Not physics and mathematics literature, but actual physics in-action via experiments and simulators on physical substrates.</strong>
+
+<br><br><br>
+
+<!-- Footnotes -->
+<div id="footnotes">
+    <hr>
+    <ol>
+        <li id="footnote1"> For some excellent speculative fiction on different mathematical realities, we’d recommend the short stories “Luminous” and “3-adica” by Greg Egan.</li>
+        <li id="footnote2">Wigner, E. P. (1960). The unreasonable effectiveness of mathematics in the natural sciences. Richard Courant lecture in mathematical sciences delivered at New York University, May 11, 1959. Communications on Pure and Applied Mathematics, 13(1), 1-14.</li>
+    </ol>
+</div>
+
+</body>
+
+</html>
