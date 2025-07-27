@@ -62,21 +62,14 @@ When asking about milestones for quantum computer performance, clear terminology
 I wrote
 <a href="https://medium.com/@wjzeng/clarifying-quantum-supremacy-better-terms-for-milestones-in-quantum-computation-d15ccb53954f" target="_blank">a short, useful taxonomy in this post</a>.
 
-Often folks are interested in ways that quantum computers could speed up machine learning tasks. We have examples for 
-<a href="">classical training of LLMs</a> but most of the examples are for learning things about quantum systems
-<a href="https://arxiv.org/abs/2112.00778">[1]</a> and
-<a href="https://arxiv.org/abs/2502.07770">[2]</a> achieving "an expected reduction of measurement time
-from more than twenty million years to less than 15
-minutes" by using a photonic system to learn a Bosonic state.
-
 When it comes to performing a valuable computation, I've done some work on the required
 resources for derivative pricing
-<a href="https://arxiv.org/abs/2012.03819" target="_blank">[3]</a>
+<a href="https://arxiv.org/abs/2012.03819" target="_blank">[1]</a>
 and there are there are other examples in chemistry
-<a href="https://arxiv.org/abs/2011.03494" target="_blank">[4]</a>
-<a href="https://arxiv.org/abs/1902.10673" target="_blank">[5]</a>
+<a href="https://arxiv.org/abs/2011.03494" target="_blank">[2]</a>
+<a href="https://arxiv.org/abs/1902.10673" target="_blank">[3]</a>
 and prime factorization
-<a href="https://arxiv.org/abs/1905.09749">[6]</a>. Our <a href="https://arxiv.org/abs/2401.16317">whitepaper</a>
+<a href="https://arxiv.org/abs/1905.09749">[4]</a>. Our <a href="https://arxiv.org/abs/2401.16317">whitepaper</a>
 (esp. Figure 2) summarizes lots of the current literature around resource estimates for different applications. We're
 aiming to have a live version of these captured at <a href="https://metriq.info/progress">metriq.info/progress</a>.
 Note that there is much left to discover in applying quantum computers.
@@ -87,6 +80,18 @@ Note that there is much left to discover in applying quantum computers.
     What size quantum computer might that need and when might they be available?</strong><br>
 I recommend this recent <a href="https://arxiv.org/abs/2506.19337">overview</a>. It looks like the near term of up to 100
 logical qubits could be useful for some very specific quantum chemistry applications.
+
+<br><br>
+<strong>Q:How about quantum machine learning? What is known about quantum advantage there?</strong><br>
+We have examples for advantage in
+<a href="">classical training of LLMs</a> but most of the examples are for learning things about quantum systems
+<a href="https://arxiv.org/abs/2112.00778">[5]</a> and
+<a href="https://arxiv.org/abs/2502.07770">[6]</a> achieving "an expected reduction of measurement time
+from more than twenty million years to less than 15
+minutes" by using a photonic system to learn a Bosonic state. In 
+<a href="https://www.nature.com/articles/s41566-025-01682-5#Sec3">[7]</a> an artificial binary classification
+task is constructed that is more easily solvable with quantum kernel methods on a small photonic quantum processor than with
+classical kernal methods.
 
 <br><br>
 <strong id="rsa">Q: When will quantum computers break RSA?</strong><br>
