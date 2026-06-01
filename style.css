@@ -84,7 +84,8 @@ p {
 @media (max-width: 600px) {
     body {
         padding: 2em 1em;
-        font-size: 15px;
+        font-size: 18px;
+        line-height: 1.6;
     }
 
     h1 {
