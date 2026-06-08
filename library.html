@@ -25,35 +25,20 @@ body{
   background:var(--bg);color:var(--body);
   font-family:var(--mono);font-size:16px;line-height:1.5;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  padding-top:4em;
 }
 ::selection{background:var(--highlight);color:var(--fg)}
-a{color:var(--link);word-wrap:break-word;text-decoration:none}
-a:hover{text-decoration:underline}
+a{color:var(--link);word-wrap:break-word;}
 a:visited{color:var(--visited)}
 strong{font-weight:700;color:var(--fg)}
 
-.wrap{max-width:62em;margin:0 auto;padding:0 1.2em}
+.wrap{max-width:52em;margin:0 auto;padding:0 1em}
 .prose{max-width:52em}
+h1{color:var(--fg);margin:0.67em 0}
 
-/* header */
-header{border-bottom:1px solid var(--rule-soft);background:var(--bg)}
-.bar{display:flex;align-items:baseline;justify-content:space-between;gap:10px 18px;flex-wrap:wrap;padding-top:1.5em;padding-bottom:1.3em}
-.bar .logo{font-weight:700;color:var(--fg);letter-spacing:.04em;font-size:15px}
-.bar nav{display:flex;gap:1.2em;flex-wrap:wrap;font-size:13px}
-.bar nav a{color:var(--link)}
 
 /* hero / verbatim opening */
-.hero{padding-top:3em;padding-bottom:1.2em}
-h1.title{font-weight:700;color:var(--fg);letter-spacing:-.01em;line-height:1.04;font-size:clamp(34px,7vw,62px)}
-.hero blockquote{
-  border-left:3px solid var(--rule);
-  margin:1.8em 0;padding:.6em 1.2em;color:var(--quote-fg);
-  font-size:15px;line-height:1.6;
-}
-.hero blockquote cite{display:block;margin-top:.9em;font-style:normal;color:var(--muted);font-size:13px}
-.hero blockquote cite em{color:var(--quote-fg)}
-.hero .intro p{margin-bottom:1em}
-.hero .intro .sig{color:var(--fg);font-weight:700}
+.hero{padding-top:0;padding-bottom:1.2em}
 
 /* scrolling shelf */
 .shelf-wrap{margin:2.4em 0 .4em;position:relative}
@@ -83,7 +68,7 @@ h1.title{font-weight:700;color:var(--fg);letter-spacing:-.01em;line-height:1.04;
 }
 
 /* collection */
-.collection{padding-top:2.4em;padding-bottom:5em;margin-top:1.6em;border-top:1px solid var(--rule-soft)}
+.collection{padding-top:2.4em;padding-bottom:5em;margin-top:1.6em}
 h2.col-title{font-weight:700;color:var(--fg);font-size:clamp(24px,4vw,34px);line-height:1.05}
 .col-sub{color:var(--body);max-width:46em;margin-top:.6em;font-size:14px}
 
@@ -183,7 +168,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6em}
   .hero{padding-top:2.2em}
   h1.title{font-size:clamp(30px,9vw,52px)}
   .hero blockquote{font-size:14.5px;padding:.5em 1em;margin:1.4em 0}
-  .bar nav{gap:.7em 1.1em;font-size:13px}
+
   .grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1.3em 1em}
   .chip{padding:.5em .85em}
   .view-toggle button{padding:.55em 1em}
@@ -192,29 +177,24 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6em}
 </head>
 <body>
 
-<header>
-  <div class="wrap bar">
-    <a class="logo" href="index.html">W. J. ZENG</a>
-    <nav>
-      <a href="index.html">home</a> | 
-      <a href="quotes.html">quotes</a>
-    </nav>
-  </div>
-</header>
+<div class="wrap">
+<h1>W. J. ZENG - Public Library</h1>
+<!-- Links -->
+|
+<a href="index.html">home</a> |
+<a href="quotes.html">quotes</a> |
+<br><br>
+</div>
 
 <main>
   <section class="hero wrap">
     <div class="prose">
-      <h1 class="title">public library</h1>
-
       <blockquote>
         “Some colleagues, a tiny bit envious of his intuitions, a few priests, more acquainted with the many evils of our time, some subalterns, clerks, and his superiors too, insisted he read strange books: from which he drew all those words that mean nothing, or almost nothing, but which serve better than others to dazzle the naïve, the ignorant…”
         <cite>— That Awful Mess on the Via Merulana, <em>Carlo Emilio Gadda</em></cite>
       </blockquote>
 
       <div class="intro">
-        <p>Enjoy! Make suggestions! Sincerely,</p>
-        <p class="sig"><a href="https://willzeng.com/">Will Zeng</a></p>
         <p>An appetizer: some other <a href="quotes.html">selected quotes</a>.</p>
       </div>
     </div>
@@ -230,7 +210,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6em}
   <section class="collection" id="collection">
     <div class="wrap">
       <h2 class="col-title">the collection</h2>
-      <p class="col-sub">Every text on the shelf. Search the canon, filter by shelf, and switch between cover and list views.</p>
 
       <div class="controls">
         <div class="search">
@@ -266,12 +245,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6em}
   </div>
 </div>
 
-<footer>
-  <div class="wrap">
-    <span>public library · 89 entries · <a href="https://willzeng.com/">willzeng.com</a></span>
-    <span>collection design after The Cypherpunk Library</span>
-  </div>
-</footer>
 
 <!--
   ============================================================
