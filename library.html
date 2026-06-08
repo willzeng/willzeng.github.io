@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)file:///Users/willzeng/Downloads/index_3.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>public library · W. J. Zeng</title>
+<meta name="description" content="A selection of Will Zeng&#39;s library — the literature, physics, mathematics, history and film on the shelf.">
+<style>
+:root{
+  --bg:#ffffff;
+  --fg:#333333;        /* headings / strong */
+  --body:#566b78;      /* body text */
+  --muted:#7e909b;     /* lighter slate */
+  --link:#03A9F4;      /* links */
+  --visited:#3F51B5;   /* visited links */
+  --highlight:#a2dffb; /* highlight */
+  --rule:#b0bec5;      /* blockquote border / shelf line */
+  --rule-soft:#dde5e9; /* subtle dividers */
+  --quote-fg:#444455;  /* blockquote text */
+  --mono:"Lucida Console","Monaco","DejaVu Sans Mono","Courier New",monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--body);
+  font-family:var(--mono);font-size:16px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+::selection{background:var(--highlight);color:var(--fg)}
+a{color:var(--link);word-wrap:break-word;text-decoration:none}
+a:hover{text-decoration:underline}
+a:visited{color:var(--visited)}
+strong{font-weight:700;color:var(--fg)}
+
+.wrap{max-width:62em;margin:0 auto;padding:0 1.2em}
+.prose{max-width:52em}
+
+/* header */
+header{border-bottom:1px solid var(--rule-soft);background:var(--bg)}
+.bar{display:flex;align-items:baseline;justify-content:space-between;gap:10px 18px;flex-wrap:wrap;padding-top:1.5em;padding-bottom:1.3em}
+.bar .logo{font-weight:700;color:var(--fg);letter-spacing:.04em;font-size:15px}
+.bar nav{display:flex;gap:1.2em;flex-wrap:wrap;font-size:13px}
+.bar nav a{color:var(--link)}
+
+/* hero / verbatim opening */
+.hero{padding-top:3em;padding-bottom:1.2em}
+h1.title{font-weight:700;color:var(--fg);letter-spacing:-.01em;line-height:1.04;font-size:clamp(34px,7vw,62px)}
+.hero blockquote{
+  border-left:3px solid var(--rule);
+  margin:1.8em 0;padding:.6em 1.2em;color:var(--quote-fg);
+  font-size:15px;line-height:1.6;
+}
+.hero blockquote cite{display:block;margin-top:.9em;font-style:normal;color:var(--muted);font-size:13px}
+.hero blockquote cite em{color:var(--quote-fg)}
+.hero .intro p{margin-bottom:1em}
+.hero .intro .sig{color:var(--fg);font-weight:700}
+
+/* scrolling shelf */
+.shelf-wrap{margin:2.4em 0 .4em;position:relative}
+.shelf-wrap .shelf-label{font-size:12px;color:var(--muted);margin-bottom:.7em;letter-spacing:.03em}
+.marquee{
+  overflow:hidden;border-bottom:2px solid var(--rule);padding-bottom:10px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
+}
+.track{display:flex;align-items:flex-end;gap:5px;width:max-content;animation:scroll 70s linear infinite;will-change:transform}
+.marquee:hover .track,.marquee.paused .track{animation-play-state:paused}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.track{animation:none}}
+.spine{
+  width:var(--w,34px);height:var(--h,180px);flex:none;
+  background:var(--c,#b0bec5);color:var(--st,#fff);
+  border-radius:1px 2px 2px 1px;border:1px solid #00000018;
+  box-shadow:inset -5px 0 9px -5px #00000033;
+  display:flex;align-items:flex-end;justify-content:center;padding:8px 0;
+  transition:transform .3s var(--ease);cursor:pointer;
+}
+.spine:hover{transform:translateY(-9px)}
+.spine span{
+  writing-mode:vertical-rl;transform:rotate(180deg);
+  font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.01em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-height:86%;
+}
+
+/* collection */
+.collection{padding-top:2.4em;padding-bottom:5em;margin-top:1.6em;border-top:1px solid var(--rule-soft)}
+h2.col-title{font-weight:700;color:var(--fg);font-size:clamp(24px,4vw,34px);line-height:1.05}
+.col-sub{color:var(--body);max-width:46em;margin-top:.6em;font-size:14px}
+
+.controls{margin-top:1.8em;display:flex;flex-direction:column;gap:1em}
+.search{position:relative;max-width:30em}
+.search input{
+  width:100%;padding:.7em .9em .7em 2.4em;border-radius:4px;
+  background:#fff;border:1px solid var(--rule);color:var(--fg);
+  font-family:var(--mono);font-size:16px;outline:none;
+  transition:border-color .2s,box-shadow .2s;
+}
+.search input::placeholder{color:var(--muted)}
+.search input:focus{border-color:var(--link);box-shadow:0 0 0 3px #03a9f422}
+.search svg{position:absolute;left:.8em;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--muted)}
+
+.chips{display:flex;flex-wrap:wrap;gap:.5em}
+.chip{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;
+  padding:.45em .8em;border-radius:999px;border:1px solid var(--rule);
+  background:#fff;color:var(--body);cursor:pointer;transition:all .18s var(--ease);white-space:nowrap;
+}
+.chip:hover{border-color:var(--link);color:var(--fg)}
+.chip .ct{color:var(--muted);margin-left:.4em}
+.chip.active{background:var(--fg);color:#fff;border-color:var(--fg)}
+.chip.active .ct{color:#ffffffaa}
+
+.filter-row{display:flex;align-items:center;justify-content:space-between;gap:1em;flex-wrap:wrap}
+.meta-row{font-size:12px;color:var(--muted);letter-spacing:.02em}
+.meta-row .count{color:var(--fg);font-weight:700}
+.view-toggle{display:flex;border:1px solid var(--rule);border-radius:999px;overflow:hidden}
+.view-toggle button{background:#fff;border:none;color:var(--muted);cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.03em;padding:.45em .9em;transition:all .18s}
+.view-toggle button.active{background:var(--fg);color:#fff}
+
+/* grid of covers */
+.grid{margin-top:2em;display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:1.6em 1.3em}
+.cover{
+  aspect-ratio:1368/2000;border-radius:1px 5px 5px 1px;
+  background:#fff;border:1px solid var(--rule-soft);
+  border-left:4px solid var(--accent,var(--rule));
+  position:relative;cursor:pointer;overflow:hidden;
+  padding:14px 13px 12px;display:flex;flex-direction:column;
+  box-shadow:0 1px 2px #2d425208;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;
+  opacity:0;transform:translateY(12px);animation:rise .5s var(--ease) forwards;
+}
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+.cover:hover{transform:translateY(-5px);box-shadow:0 14px 26px -16px #34506680;border-color:var(--link)}
+.cover .clabel{font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.cover .ext{position:absolute;top:12px;right:11px;font-size:11px;color:var(--link)}
+.cover .ctitle{font-weight:700;color:var(--fg);line-height:1.12;margin-top:auto;font-size:clamp(13px,1.3vw,15px);overflow:hidden}
+.cover .cmeta{margin-top:.6em;font-size:9.5px;line-height:1.4;color:var(--body)}
+.cover .cmeta .yr{color:var(--fg);font-weight:700}
+.cover .ctag{margin-top:.55em;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent,var(--muted))}
+
+/* list */
+.list{margin-top:1.6em;display:none;flex-direction:column}
+.list.show{display:flex}
+.grid.hide{display:none}
+.row{
+  display:grid;grid-template-columns:1.7fr 1fr 52px 120px;gap:1.1em;align-items:center;
+  padding:.85em .3em;border-bottom:1px solid var(--rule-soft);cursor:pointer;
+  transition:background .15s,padding-left .15s var(--ease);
+}
+.row:hover{background:#f4fafe;padding-left:.7em}
+.row .r-title{font-weight:700;color:var(--fg);font-size:14px;display:flex;align-items:center;gap:.6em}
+.row .r-title .dot{width:7px;height:7px;border-radius:2px;background:var(--accent,var(--rule));flex:none}
+.row .r-author{color:var(--body);font-size:12.5px}
+.row .r-year{font-size:12px;color:var(--muted)}
+.row .r-cat{font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);text-align:right}
+@media(max-width:640px){.row{grid-template-columns:1fr 56px}.row .r-author,.row .r-cat{display:none}}
+
+/* modal */
+.modal-bg{position:fixed;inset:0;z-index:200;background:#2d425255;display:none;align-items:center;justify-content:center;padding:1.4em;opacity:0;transition:opacity .25s}
+.modal-bg.open{display:flex;opacity:1}
+.modal{
+  background:#fff;border:1px solid var(--rule);border-top:3px solid var(--accent,var(--fg));
+  border-radius:6px;max-width:30em;width:100%;padding:2em 1.9em 1.7em;position:relative;
+  box-shadow:0 24px 60px -28px #2d4252aa;transform:translateY(10px);transition:transform .3s var(--ease);
+}
+.modal-bg.open .modal{transform:translateY(0)}
+.modal .mlabel{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.modal h3{font-weight:700;color:var(--fg);font-size:22px;line-height:1.12;margin:.5em 0 .8em}
+.modal .mline{display:flex;gap:.7em;font-size:13px;margin-bottom:.35em;align-items:baseline}
+.modal .mline .lab{font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);min-width:5.2em}
+.modal .mline .val{color:var(--fg)}
+.modal .mnote{margin-top:.9em;padding-top:.9em;border-top:1px solid var(--rule-soft);color:var(--quote-fg);font-size:13px}
+.modal .mopen{display:inline-block;margin-top:1.3em;font-size:13px}
+.modal .mclose{position:absolute;top:.7em;right:.8em;width:34px;height:34px;border-radius:999px;border:1px solid var(--rule);background:#fff;color:var(--muted);cursor:pointer;font-size:14px;line-height:1;transition:all .18s}
+.modal .mclose:hover{color:var(--fg);border-color:var(--fg)}
+
+footer{border-top:1px solid var(--rule-soft);padding:2em 0;font-size:12px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6em}
+
+@media(max-width:560px){
+  body{font-size:18px;line-height:1.6}
+  .wrap{padding:0 1.1em}
+  .hero{padding-top:2.2em}
+  h1.title{font-size:clamp(30px,9vw,52px)}
+  .hero blockquote{font-size:14.5px;padding:.5em 1em;margin:1.4em 0}
+  .bar nav{gap:.7em 1.1em;font-size:13px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1.3em 1em}
+  .chip{padding:.5em .85em}
+  .view-toggle button{padding:.55em 1em}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="https://willzeng.com/">W. J. ZENG</a>
+    <nav>
+      <a href="https://willzeng.com/">home</a>
+      <a href="file:///Users/willzeng/Downloads/index_3.html#collection">the collection</a>
+      <a href="https://willzeng.com/quotes" target="_blank" rel="noopener">quotes</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div class="prose">
+      <h1 class="title">public library</h1>
+
+      <blockquote>
+        “Some colleagues, a tiny bit envious of his intuitions, a few priests, more acquainted with the many evils of our time, some subalterns, clerks, and his superiors too, insisted he read strange books: from which he drew all those words that mean nothing, or almost nothing, but which serve better than others to dazzle the naïve, the ignorant…”
+        <cite>— That Awful Mess on the Via Merulana, <em>Carlo Emilio Gadda</em></cite>
+      </blockquote>
+
+      <div class="intro">
+        <p>Enjoy! Make suggestions! Sincerely,</p>
+        <p class="sig"><a href="https://willzeng.com/">Will Zeng</a></p>
+        <p>An appetizer: some other <a href="https://willzeng.com/quotes" target="_blank" rel="noopener">selected quotes</a>.</p>
+      </div>
+    </div>
+
+    <div class="shelf-wrap">
+      <div class="shelf-label">// the shelf — hover to pause · tap a spine to open</div>
+      <div class="marquee" id="marquee">
+        <div class="track" id="track"><div class="spine" data-i="0" style="--h:168px;--w:34px;--c:#03A9F4;--st:#ffffff"><span>The Man Without Qualities</span></div><div class="spine" data-i="2" style="--h:181px;--w:27px;--c:#90a4ae;--st:#ffffff"><span>The Passenger</span></div><div class="spine" data-i="4" style="--h:208px;--w:34px;--c:#566b78;--st:#ffffff"><span>Locus Solus</span></div><div class="spine" data-i="6" style="--h:180px;--w:26px;--c:#455a64;--st:#ffffff"><span>t zero</span></div><div class="spine" data-i="8" style="--h:175px;--w:41px;--c:#78909c;--st:#ffffff"><span>Cosmicomics</span></div><div class="spine" data-i="10" style="--h:211px;--w:37px;--c:#90a4ae;--st:#ffffff"><span>Ficciones</span></div><div class="spine" data-i="12" style="--h:185px;--w:41px;--c:#455a64;--st:#ffffff"><span>Naked Lunch</span></div><div class="spine" data-i="14" style="--h:198px;--w:34px;--c:#03A9F4;--st:#ffffff"><span>Life a User's Manual</span></div><div class="spine" data-i="16" style="--h:212px;--w:28px;--c:#b0bec5;--st:#33414a"><span>A Case of Conscience</span></div><div class="spine" data-i="18" style="--h:208px;--w:34px;--c:#b0bec5;--st:#33414a"><span>The Age of Wire and String</span></div><div class="spine" data-i="20" style="--h:211px;--w:27px;--c:#455a64;--st:#ffffff"><span>The Void Captain's Tale</span></div><div class="spine" data-i="22" style="--h:152px;--w:38px;--c:#b0bec5;--st:#33414a"><span>Matterhorn</span></div><div class="spine" data-i="24" style="--h:210px;--w:36px;--c:#3F51B5;--st:#ffffff"><span>2312</span></div><div class="spine" data-i="26" style="--h:188px;--w:34px;--c:#455a64;--st:#ffffff"><span>Labyrinths</span></div><div class="spine" data-i="28" style="--h:156px;--w:32px;--c:#3F51B5;--st:#ffffff"><span>This Is How You Lose the Time War</span></div><div class="spine" data-i="30" style="--h:196px;--w:42px;--c:#3F51B5;--st:#ffffff"><span>Emergency Skin</span></div><div class="spine" data-i="32" style="--h:212px;--w:28px;--c:#3F51B5;--st:#ffffff"><span>The Best of Greg Egan</span></div><div class="spine" data-i="34" style="--h:174px;--w:40px;--c:#cfd8dc;--st:#33414a"><span>Quarantine</span></div><div class="spine" data-i="36" style="--h:198px;--w:44px;--c:#a2dffb;--st:#33414a"><span>Six Memos for the Next Millennium</span></div><div class="spine" data-i="38" style="--h:177px;--w:43px;--c:#78909c;--st:#ffffff"><span>Trickster Makes the World</span></div><div class="spine" data-i="40" style="--h:201px;--w:37px;--c:#566b78;--st:#ffffff"><span>System and Structure</span></div><div class="spine" data-i="42" style="--h:163px;--w:39px;--c:#cfd8dc;--st:#33414a"><span>Theory of Prose</span></div><div class="spine" data-i="44" style="--h:168px;--w:34px;--c:#b0bec5;--st:#33414a"><span>Of Grammatology</span></div><div class="spine" data-i="46" style="--h:154px;--w:30px;--c:#78909c;--st:#ffffff"><span>The Structure of Scientific Revolutions</span></div><div class="spine" data-i="48" style="--h:172px;--w:38px;--c:#566b78;--st:#ffffff"><span>Mathematics: The Loss of Certainty</span></div><div class="spine" data-i="50" style="--h:193px;--w:39px;--c:#566b78;--st:#ffffff"><span>Counterexamples in Quantum Information</span></div><div class="spine" data-i="52" style="--h:206px;--w:32px;--c:#566b78;--st:#ffffff"><span>A Practical Quantum Instruction Set Architecture</span></div><div class="spine" data-i="54" style="--h:208px;--w:34px;--c:#90a4ae;--st:#ffffff"><span>The Emergent Multiverse</span></div><div class="spine" data-i="56" style="--h:174px;--w:40px;--c:#b0bec5;--st:#33414a"><span>The Princeton Companion to Mathematics</span></div><div class="spine" data-i="58" style="--h:162px;--w:28px;--c:#90a4ae;--st:#ffffff"><span>Basic Category Theory for Computer Scientists</span></div><div class="spine" data-i="60" style="--h:216px;--w:42px;--c:#cfd8dc;--st:#33414a"><span>Homotopy Type Theory</span></div><div class="spine" data-i="62" style="--h:214px;--w:40px;--c:#566b78;--st:#ffffff"><span>Where Mathematics Comes From</span></div><div class="spine" data-i="64" style="--h:186px;--w:32px;--c:#90a4ae;--st:#ffffff"><span>You and Your Research</span></div><div class="spine" data-i="66" style="--h:178px;--w:34px;--c:#455a64;--st:#ffffff"><span>The Man Behind the Microchip</span></div><div class="spine" data-i="68" style="--h:198px;--w:34px;--c:#03A9F4;--st:#ffffff"><span>The Pixar Touch</span></div><div class="spine" data-i="70" style="--h:214px;--w:30px;--c:#90a4ae;--st:#ffffff"><span>The Age of Wonder</span></div><div class="spine" data-i="72" style="--h:170px;--w:26px;--c:#78909c;--st:#ffffff"><span>Oppenheimer's Farewell Speech</span></div><div class="spine" data-i="74" style="--h:212px;--w:28px;--c:#455a64;--st:#ffffff"><span>Ex Machina</span></div><div class="spine" data-i="76" style="--h:211px;--w:27px;--c:#566b78;--st:#ffffff"><span>Tokyo Godfathers</span></div><div class="spine" data-i="78" style="--h:185px;--w:31px;--c:#455a64;--st:#ffffff"><span>8½</span></div><div class="spine" data-i="80" style="--h:216px;--w:32px;--c:#b0bec5;--st:#33414a"><span>The Cartographer Tries to Map a Way to Zion</span></div><div class="spine" data-i="82" style="--h:183px;--w:29px;--c:#a2dffb;--st:#33414a"><span>The Cinnamon Peeler</span></div><div class="spine" data-i="84" style="--h:152px;--w:38px;--c:#455a64;--st:#ffffff"><span>The Nature of the Firm</span></div><div class="spine" data-i="86" style="--h:203px;--w:29px;--c:#566b78;--st:#ffffff"><span>Leadership on the Line</span></div><div class="spine" data-i="88" style="--h:199px;--w:35px;--c:#cfd8dc;--st:#33414a"><span>Peaks of Yemen I Summon</span></div><div class="spine" data-i="0" style="--h:168px;--w:34px;--c:#03A9F4;--st:#ffffff"><span>The Man Without Qualities</span></div><div class="spine" data-i="2" style="--h:181px;--w:27px;--c:#90a4ae;--st:#ffffff"><span>The Passenger</span></div><div class="spine" data-i="4" style="--h:208px;--w:34px;--c:#566b78;--st:#ffffff"><span>Locus Solus</span></div><div class="spine" data-i="6" style="--h:180px;--w:26px;--c:#455a64;--st:#ffffff"><span>t zero</span></div><div class="spine" data-i="8" style="--h:175px;--w:41px;--c:#78909c;--st:#ffffff"><span>Cosmicomics</span></div><div class="spine" data-i="10" style="--h:211px;--w:37px;--c:#90a4ae;--st:#ffffff"><span>Ficciones</span></div><div class="spine" data-i="12" style="--h:185px;--w:41px;--c:#455a64;--st:#ffffff"><span>Naked Lunch</span></div><div class="spine" data-i="14" style="--h:198px;--w:34px;--c:#03A9F4;--st:#ffffff"><span>Life a User's Manual</span></div><div class="spine" data-i="16" style="--h:212px;--w:28px;--c:#b0bec5;--st:#33414a"><span>A Case of Conscience</span></div><div class="spine" data-i="18" style="--h:208px;--w:34px;--c:#b0bec5;--st:#33414a"><span>The Age of Wire and String</span></div><div class="spine" data-i="20" style="--h:211px;--w:27px;--c:#455a64;--st:#ffffff"><span>The Void Captain's Tale</span></div><div class="spine" data-i="22" style="--h:152px;--w:38px;--c:#b0bec5;--st:#33414a"><span>Matterhorn</span></div><div class="spine" data-i="24" style="--h:210px;--w:36px;--c:#3F51B5;--st:#ffffff"><span>2312</span></div><div class="spine" data-i="26" style="--h:188px;--w:34px;--c:#455a64;--st:#ffffff"><span>Labyrinths</span></div><div class="spine" data-i="28" style="--h:156px;--w:32px;--c:#3F51B5;--st:#ffffff"><span>This Is How You Lose the Time War</span></div><div class="spine" data-i="30" style="--h:196px;--w:42px;--c:#3F51B5;--st:#ffffff"><span>Emergency Skin</span></div><div class="spine" data-i="32" style="--h:212px;--w:28px;--c:#3F51B5;--st:#ffffff"><span>The Best of Greg Egan</span></div><div class="spine" data-i="34" style="--h:174px;--w:40px;--c:#cfd8dc;--st:#33414a"><span>Quarantine</span></div><div class="spine" data-i="36" style="--h:198px;--w:44px;--c:#a2dffb;--st:#33414a"><span>Six Memos for the Next Millennium</span></div><div class="spine" data-i="38" style="--h:177px;--w:43px;--c:#78909c;--st:#ffffff"><span>Trickster Makes the World</span></div><div class="spine" data-i="40" style="--h:201px;--w:37px;--c:#566b78;--st:#ffffff"><span>System and Structure</span></div><div class="spine" data-i="42" style="--h:163px;--w:39px;--c:#cfd8dc;--st:#33414a"><span>Theory of Prose</span></div><div class="spine" data-i="44" style="--h:168px;--w:34px;--c:#b0bec5;--st:#33414a"><span>Of Grammatology</span></div><div class="spine" data-i="46" style="--h:154px;--w:30px;--c:#78909c;--st:#ffffff"><span>The Structure of Scientific Revolutions</span></div><div class="spine" data-i="48" style="--h:172px;--w:38px;--c:#566b78;--st:#ffffff"><span>Mathematics: The Loss of Certainty</span></div><div class="spine" data-i="50" style="--h:193px;--w:39px;--c:#566b78;--st:#ffffff"><span>Counterexamples in Quantum Information</span></div><div class="spine" data-i="52" style="--h:206px;--w:32px;--c:#566b78;--st:#ffffff"><span>A Practical Quantum Instruction Set Architecture</span></div><div class="spine" data-i="54" style="--h:208px;--w:34px;--c:#90a4ae;--st:#ffffff"><span>The Emergent Multiverse</span></div><div class="spine" data-i="56" style="--h:174px;--w:40px;--c:#b0bec5;--st:#33414a"><span>The Princeton Companion to Mathematics</span></div><div class="spine" data-i="58" style="--h:162px;--w:28px;--c:#90a4ae;--st:#ffffff"><span>Basic Category Theory for Computer Scientists</span></div><div class="spine" data-i="60" style="--h:216px;--w:42px;--c:#cfd8dc;--st:#33414a"><span>Homotopy Type Theory</span></div><div class="spine" data-i="62" style="--h:214px;--w:40px;--c:#566b78;--st:#ffffff"><span>Where Mathematics Comes From</span></div><div class="spine" data-i="64" style="--h:186px;--w:32px;--c:#90a4ae;--st:#ffffff"><span>You and Your Research</span></div><div class="spine" data-i="66" style="--h:178px;--w:34px;--c:#455a64;--st:#ffffff"><span>The Man Behind the Microchip</span></div><div class="spine" data-i="68" style="--h:198px;--w:34px;--c:#03A9F4;--st:#ffffff"><span>The Pixar Touch</span></div><div class="spine" data-i="70" style="--h:214px;--w:30px;--c:#90a4ae;--st:#ffffff"><span>The Age of Wonder</span></div><div class="spine" data-i="72" style="--h:170px;--w:26px;--c:#78909c;--st:#ffffff"><span>Oppenheimer's Farewell Speech</span></div><div class="spine" data-i="74" style="--h:212px;--w:28px;--c:#455a64;--st:#ffffff"><span>Ex Machina</span></div><div class="spine" data-i="76" style="--h:211px;--w:27px;--c:#566b78;--st:#ffffff"><span>Tokyo Godfathers</span></div><div class="spine" data-i="78" style="--h:185px;--w:31px;--c:#455a64;--st:#ffffff"><span>8½</span></div><div class="spine" data-i="80" style="--h:216px;--w:32px;--c:#b0bec5;--st:#33414a"><span>The Cartographer Tries to Map a Way to Zion</span></div><div class="spine" data-i="82" style="--h:183px;--w:29px;--c:#a2dffb;--st:#33414a"><span>The Cinnamon Peeler</span></div><div class="spine" data-i="84" style="--h:152px;--w:38px;--c:#455a64;--st:#ffffff"><span>The Nature of the Firm</span></div><div class="spine" data-i="86" style="--h:203px;--w:29px;--c:#566b78;--st:#ffffff"><span>Leadership on the Line</span></div><div class="spine" data-i="88" style="--h:199px;--w:35px;--c:#cfd8dc;--st:#33414a"><span>Peaks of Yemen I Summon</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="collection" id="collection">
+    <div class="wrap">
+      <h2 class="col-title">the collection</h2>
+      <p class="col-sub">Every text on the shelf. Search the canon, filter by shelf, and switch between cover and list views.</p>
+
+      <div class="controls">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          <input id="search" type="text" placeholder="search titles and authors…">
+        </div>
+        <div class="chips" id="chips"><button class="chip active" data-cat="All">all<span class="ct">89</span></button><button class="chip" data-cat="Literature">literature<span class="ct">35</span></button><button class="chip" data-cat="Philosophy &amp; Theory">philosophy &amp; theory<span class="ct">15</span></button><button class="chip" data-cat="Quantum">quantum<span class="ct">6</span></button><button class="chip" data-cat="Physics">physics<span class="ct">8</span></button><button class="chip" data-cat="Mathematics">mathematics<span class="ct">7</span></button><button class="chip" data-cat="Computing">computing<span class="ct">6</span></button><button class="chip" data-cat="History of Science">history of science<span class="ct">7</span></button><button class="chip" data-cat="Technology &amp; Ethics">technology &amp; ethics<span class="ct">1</span></button><button class="chip" data-cat="Film">film<span class="ct">7</span></button><button class="chip" data-cat="Poetry">poetry<span class="ct">4</span></button><button class="chip" data-cat="Economics">economics<span class="ct">2</span></button><button class="chip" data-cat="Leadership">leadership<span class="ct">1</span></button><button class="chip" data-cat="Other">other<span class="ct">2</span></button></div>
+        <div class="filter-row">
+          <div class="meta-row"><span class="count" id="count">89</span> entries</div>
+          <div class="view-toggle">
+            <button id="vCover" class="active">covers</button>
+            <button id="vList">list</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid" id="grid"><article class="cover" style="--accent:#03A9F4;animation-delay:0ms" data-i="0">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Man Without Qualities</div>
+      <div class="cmeta">Robert Musil<br><span class="yr">1930</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:18ms" data-i="1">
+      <div class="clabel">public library</div>
+      <div class="ctitle">That Awful Mess on the Via Merulana</div>
+      <div class="cmeta">Carlo Emilio Gadda<br><span class="yr">1957</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:36ms" data-i="2">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Passenger</div>
+      <div class="cmeta">Cormac McCarthy<br><span class="yr">2022</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:54ms" data-i="3">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Stella Maris</div>
+      <div class="cmeta">Cormac McCarthy<br><span class="yr">2022</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:72ms" data-i="4">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Locus Solus</div>
+      <div class="cmeta">Raymond Roussel<br><span class="yr">1914</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:90ms" data-i="5">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Invisible Cities</div>
+      <div class="cmeta">Italo Calvino<br><span class="yr">1972</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:108ms" data-i="6">
+      <div class="clabel">public library</div>
+      <div class="ctitle">t zero</div>
+      <div class="cmeta">Italo Calvino<br><span class="yr">1967</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:126ms" data-i="7">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Star Maker</div>
+      <div class="cmeta">Olaf Stapledon<br><span class="yr">1937</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:144ms" data-i="8">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Cosmicomics</div>
+      <div class="cmeta">Italo Calvino<br><span class="yr">1965</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:162ms" data-i="9">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Jesus' Son</div>
+      <div class="cmeta">Denis Johnson<br><span class="yr">1992</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:180ms" data-i="10">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Ficciones</div>
+      <div class="cmeta">Jorge Luis Borges<br><span class="yr">1944</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:198ms" data-i="11">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Blood Meridian</div>
+      <div class="cmeta">Cormac McCarthy<br><span class="yr">1985</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:216ms" data-i="12">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Naked Lunch</div>
+      <div class="cmeta">William S. Burroughs<br><span class="yr">1959</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:234ms" data-i="13">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Stranger in a Strange Land</div>
+      <div class="cmeta">Robert A. Heinlein<br><span class="yr">1961</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:252ms" data-i="14">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Life a User's Manual</div>
+      <div class="cmeta">Georges Perec<br><span class="yr">1978</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:270ms" data-i="15">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Sum</div>
+      <div class="cmeta">David Eagleman<br><span class="yr">2009</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:288ms" data-i="16">
+      <div class="clabel">public library</div>
+      <div class="ctitle">A Case of Conscience</div>
+      <div class="cmeta">James Blish<br><span class="yr">1958</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:306ms" data-i="17">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Red Cavalry</div>
+      <div class="cmeta">Isaac Babel<br><span class="yr">1926</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:324ms" data-i="18">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Age of Wire and String</div>
+      <div class="cmeta">Ben Marcus<br><span class="yr">1995</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:342ms" data-i="19">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Stories of Your Life and Others</div>
+      <div class="cmeta">Ted Chiang<br><span class="yr">2002</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:360ms" data-i="20">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Void Captain's Tale</div>
+      <div class="cmeta">Norman Spinrad<br><span class="yr">1983</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:378ms" data-i="21">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Blindsight</div>
+      <div class="cmeta">Peter Watts<br><span class="yr">2006</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:396ms" data-i="22">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Matterhorn</div>
+      <div class="cmeta">Karl Marlantes<br><span class="yr">2010</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:414ms" data-i="23">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Wittgenstein's Mistress</div>
+      <div class="cmeta">David Markson<br><span class="yr">1988</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="24">
+      <div class="clabel">public library</div>
+      <div class="ctitle">2312</div>
+      <div class="cmeta">Kim Stanley Robinson<br><span class="yr">2012</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="25">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Cat's Cradle</div>
+      <div class="cmeta">Kurt Vonnegut<br><span class="yr">1963</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="26">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Labyrinths</div>
+      <div class="cmeta">Jorge Luis Borges<br><span class="yr">1962</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="27">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Broken Earth Trilogy</div>
+      <div class="cmeta">N. K. Jemisin<br><span class="yr">2015</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="28">
+      <div class="clabel">public library</div>
+      <div class="ctitle">This Is How You Lose the Time War</div>
+      <div class="cmeta">Amal El-Mohtar &amp; Max Gladstone<br><span class="yr">2019</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="29">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Exhalation</div>
+      <div class="cmeta">Ted Chiang<br><span class="yr">2019</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="30">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Emergency Skin</div>
+      <div class="cmeta">N. K. Jemisin<br><span class="yr">2019</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="31">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Overstory</div>
+      <div class="cmeta">Richard Powers<br><span class="yr">2018</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="32">
+      <div class="clabel">public library</div><span class="ext">↗</span>
+      <div class="ctitle">The Best of Greg Egan</div>
+      <div class="cmeta">Greg Egan<br><span class="yr">2019</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="33">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Distress</div>
+      <div class="cmeta">Greg Egan<br><span class="yr">1995</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="34">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Quarantine</div>
+      <div class="cmeta">Greg Egan<br><span class="yr">1992</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:420ms" data-i="35">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Critique of Pure Reason</div>
+      <div class="cmeta">Immanuel Kant<br><span class="yr">1781</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="36">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Six Memos for the Next Millennium</div>
+      <div class="cmeta">Italo Calvino<br><span class="yr">1988</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="37">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Phenomenology of Spirit</div>
+      <div class="cmeta">G. W. F. Hegel<br><span class="yr">1807</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="38">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Trickster Makes the World</div>
+      <div class="cmeta">Lewis Hyde<br><span class="yr">1998</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="39">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Steps to an Ecology of Mind</div>
+      <div class="cmeta">Gregory Bateson<br><span class="yr">1972</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:420ms" data-i="40">
+      <div class="clabel">public library</div>
+      <div class="ctitle">System and Structure</div>
+      <div class="cmeta">Anthony Wilden<br><span class="yr">1972</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:420ms" data-i="41">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Gramophone, Film, Typewriter</div>
+      <div class="cmeta">Friedrich Kittler<br><span class="yr">1986</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="42">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Theory of Prose</div>
+      <div class="cmeta">Viktor Shklovsky<br><span class="yr">1925</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="43">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Graphs, Maps and Trees</div>
+      <div class="cmeta">Franco Moretti<br><span class="yr">2005</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="44">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Of Grammatology</div>
+      <div class="cmeta">Jacques Derrida<br><span class="yr">1967</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="45">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Tractatus Logico-Philosophicus</div>
+      <div class="cmeta">Ludwig Wittgenstein<br><span class="yr">1921</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="46">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Structure of Scientific Revolutions</div>
+      <div class="cmeta">Thomas S. Kuhn<br><span class="yr">1962</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="47">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Poetic Structure of the World</div>
+      <div class="cmeta">Fernand Hallyn<br><span class="yr">1987</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="48">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Mathematics: The Loss of Certainty</div>
+      <div class="cmeta">Morris Kline<br><span class="yr">1980</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="49">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The World as Will and Representation</div>
+      <div class="cmeta">Arthur Schopenhauer<br><span class="yr">1818</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="50">
+      <div class="clabel">public library</div><span class="ext">↗</span>
+      <div class="ctitle">Counterexamples in Quantum Information</div>
+      <div class="cmeta">A community document<br><span class="yr">—</span></div>
+      <div class="ctag">Document</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="51">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Quantum Computation and Quantum Information</div>
+      <div class="cmeta">Michael Nielsen &amp; Isaac Chuang<br><span class="yr">2000</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="52">
+      <div class="clabel">public library</div><span class="ext">↗</span>
+      <div class="ctitle">A Practical Quantum Instruction Set Architecture</div>
+      <div class="cmeta">R. Smith, M. Curtis &amp; W. Zeng<br><span class="yr">2016</span></div>
+      <div class="ctag">Paper</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="53">
+      <div class="clabel">public library</div><span class="ext">↗</span>
+      <div class="ctitle">No Return to Classical Reality</div>
+      <div class="cmeta">David Jennings &amp; Matthew Leifer<br><span class="yr">2015</span></div>
+      <div class="ctag">Paper</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="54">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Emergent Multiverse</div>
+      <div class="cmeta">David Wallace<br><span class="yr">2012</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="55">
+      <div class="clabel">public library</div><span class="ext">↗</span>
+      <div class="ctitle">Physics, Topology, Logic and Computation: A Rosetta Stone</div>
+      <div class="cmeta">John Baez &amp; Mike Stay<br><span class="yr">2009</span></div>
+      <div class="ctag">Paper</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="56">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Princeton Companion to Mathematics</div>
+      <div class="cmeta">Timothy Gowers (ed.)<br><span class="yr">2008</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="57">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Conceptual Mathematics</div>
+      <div class="cmeta">F. W. Lawvere &amp; S. Schanuel<br><span class="yr">1997</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="58">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Basic Category Theory for Computer Scientists</div>
+      <div class="cmeta">Benjamin C. Pierce<br><span class="yr">1991</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="59">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Groups and Their Graphs</div>
+      <div class="cmeta">Israel Grossman &amp; Wilhelm Magnus<br><span class="yr">1964</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="60">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Homotopy Type Theory</div>
+      <div class="cmeta">The Univalent Foundations Program<br><span class="yr">2013</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="61">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Mathematics, Morally</div>
+      <div class="cmeta">Eugenia Cheng<br><span class="yr">2004</span></div>
+      <div class="ctag">Essay</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="62">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Where Mathematics Comes From</div>
+      <div class="cmeta">George Lakoff &amp; Rafael Núñez<br><span class="yr">2000</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="63">
+      <div class="clabel">public library</div><span class="ext">↗</span>
+      <div class="ctitle">Why Philosophers Should Care About Computational Complexity</div>
+      <div class="cmeta">Scott Aaronson<br><span class="yr">2011</span></div>
+      <div class="ctag">Paper</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="64">
+      <div class="clabel">public library</div>
+      <div class="ctitle">You and Your Research</div>
+      <div class="cmeta">Richard Hamming<br><span class="yr">1986</span></div>
+      <div class="ctag">Essay</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="65">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Where Wizards Stay Up Late</div>
+      <div class="cmeta">Katie Hafner &amp; Matthew Lyon<br><span class="yr">1996</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="66">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Man Behind the Microchip</div>
+      <div class="cmeta">Leslie Berlin<br><span class="yr">2005</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="67">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Supermen</div>
+      <div class="cmeta">Charles J. Murray<br><span class="yr">1997</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="68">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Pixar Touch</div>
+      <div class="cmeta">David A. Price<br><span class="yr">2008</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="69">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Making of the Atomic Bomb</div>
+      <div class="cmeta">Richard Rhodes<br><span class="yr">1986</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="70">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Age of Wonder</div>
+      <div class="cmeta">Richard Holmes<br><span class="yr">2008</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="71">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Minds, Machines, and the Multiverse</div>
+      <div class="cmeta">Julian Brown<br><span class="yr">2000</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="72">
+      <div class="clabel">public library</div><span class="ext">↗</span>
+      <div class="ctitle">Oppenheimer's Farewell Speech</div>
+      <div class="cmeta">J. Robert Oppenheimer<br><span class="yr">1945</span></div>
+      <div class="ctag">Speech</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="73">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Lawrence of Arabia</div>
+      <div class="cmeta">David Lean<br><span class="yr">1962</span></div>
+      <div class="ctag">Film</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="74">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Ex Machina</div>
+      <div class="cmeta">Alex Garland<br><span class="yr">2014</span></div>
+      <div class="ctag">Film</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="75">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Paprika</div>
+      <div class="cmeta">Satoshi Kon<br><span class="yr">2006</span></div>
+      <div class="ctag">Film</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="76">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Tokyo Godfathers</div>
+      <div class="cmeta">Satoshi Kon<br><span class="yr">2003</span></div>
+      <div class="ctag">Film</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="77">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Synecdoche, New York</div>
+      <div class="cmeta">Charlie Kaufman<br><span class="yr">2008</span></div>
+      <div class="ctag">Film</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="78">
+      <div class="clabel">public library</div>
+      <div class="ctitle">8½</div>
+      <div class="cmeta">Federico Fellini<br><span class="yr">1963</span></div>
+      <div class="ctag">Film</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="79">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Cowboy Bebop, Samurai Champloo &amp; Space Dandy</div>
+      <div class="cmeta">Shinichirō Watanabe<br><span class="yr">1998</span></div>
+      <div class="ctag">Film</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="80">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Cartographer Tries to Map a Way to Zion</div>
+      <div class="cmeta">Kei Miller<br><span class="yr">2014</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="81">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Waste Land</div>
+      <div class="cmeta">T. S. Eliot<br><span class="yr">1922</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:420ms" data-i="82">
+      <div class="clabel">public library</div>
+      <div class="ctitle">The Cinnamon Peeler</div>
+      <div class="cmeta">Michael Ondaatje<br><span class="yr">1989</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:420ms" data-i="83">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Oulipo Compendium</div>
+      <div class="cmeta">Harry Mathews &amp; Alastair Brotchie (eds.)<br><span class="yr">1998</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#03A9F4;animation-delay:420ms" data-i="84">
+      <div class="clabel">public library</div><span class="ext">↗</span>
+      <div class="ctitle">The Nature of the Firm</div>
+      <div class="cmeta">R. H. Coase<br><span class="yr">1937</span></div>
+      <div class="ctag">Paper</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:420ms" data-i="85">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Radical Markets</div>
+      <div class="cmeta">Eric A. Posner &amp; E. Glen Weyl<br><span class="yr">2018</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#90a4ae;animation-delay:420ms" data-i="86">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Leadership on the Line</div>
+      <div class="cmeta">Ronald Heifetz &amp; Marty Linsky<br><span class="yr">2002</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#566b78;animation-delay:420ms" data-i="87">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Do No Harm</div>
+      <div class="cmeta">Henry Marsh<br><span class="yr">2014</span></div>
+      <div class="ctag">Book</div>
+    </article><article class="cover" style="--accent:#3F51B5;animation-delay:420ms" data-i="88">
+      <div class="clabel">public library</div>
+      <div class="ctitle">Peaks of Yemen I Summon</div>
+      <div class="cmeta">Steven C. Caton<br><span class="yr">1990</span></div>
+      <div class="ctag">Book</div>
+    </article></div>
+      <div class="list" id="list"><div class="row" data-i="0">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>The Man Without Qualities</div>
+      <div class="r-author">Robert Musil</div>
+      <div class="r-year">1930</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="1">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>That Awful Mess on the Via Merulana</div>
+      <div class="r-author">Carlo Emilio Gadda</div>
+      <div class="r-year">1957</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="2">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>The Passenger</div>
+      <div class="r-author">Cormac McCarthy</div>
+      <div class="r-year">2022</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="3">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Stella Maris</div>
+      <div class="r-author">Cormac McCarthy</div>
+      <div class="r-year">2022</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="4">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Locus Solus</div>
+      <div class="r-author">Raymond Roussel</div>
+      <div class="r-year">1914</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="5">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Invisible Cities</div>
+      <div class="r-author">Italo Calvino</div>
+      <div class="r-year">1972</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="6">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>t zero</div>
+      <div class="r-author">Italo Calvino</div>
+      <div class="r-year">1967</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="7">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>Star Maker</div>
+      <div class="r-author">Olaf Stapledon</div>
+      <div class="r-year">1937</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="8">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Cosmicomics</div>
+      <div class="r-author">Italo Calvino</div>
+      <div class="r-year">1965</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="9">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Jesus' Son</div>
+      <div class="r-author">Denis Johnson</div>
+      <div class="r-year">1992</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="10">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Ficciones</div>
+      <div class="r-author">Jorge Luis Borges</div>
+      <div class="r-year">1944</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="11">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Blood Meridian</div>
+      <div class="r-author">Cormac McCarthy</div>
+      <div class="r-year">1985</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="12">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Naked Lunch</div>
+      <div class="r-author">William S. Burroughs</div>
+      <div class="r-year">1959</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="13">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Stranger in a Strange Land</div>
+      <div class="r-author">Robert A. Heinlein</div>
+      <div class="r-year">1961</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="14">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Life a User's Manual</div>
+      <div class="r-author">Georges Perec</div>
+      <div class="r-year">1978</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="15">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Sum</div>
+      <div class="r-author">David Eagleman</div>
+      <div class="r-year">2009</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="16">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>A Case of Conscience</div>
+      <div class="r-author">James Blish</div>
+      <div class="r-year">1958</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="17">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Red Cavalry</div>
+      <div class="r-author">Isaac Babel</div>
+      <div class="r-year">1926</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="18">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>The Age of Wire and String</div>
+      <div class="r-author">Ben Marcus</div>
+      <div class="r-year">1995</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="19">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Stories of Your Life and Others</div>
+      <div class="r-author">Ted Chiang</div>
+      <div class="r-year">2002</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="20">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>The Void Captain's Tale</div>
+      <div class="r-author">Norman Spinrad</div>
+      <div class="r-year">1983</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="21">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Blindsight</div>
+      <div class="r-author">Peter Watts</div>
+      <div class="r-year">2006</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="22">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Matterhorn</div>
+      <div class="r-author">Karl Marlantes</div>
+      <div class="r-year">2010</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="23">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Wittgenstein's Mistress</div>
+      <div class="r-author">David Markson</div>
+      <div class="r-year">1988</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="24">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>2312</div>
+      <div class="r-author">Kim Stanley Robinson</div>
+      <div class="r-year">2012</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="25">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Cat's Cradle</div>
+      <div class="r-author">Kurt Vonnegut</div>
+      <div class="r-year">1963</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="26">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Labyrinths</div>
+      <div class="r-author">Jorge Luis Borges</div>
+      <div class="r-year">1962</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="27">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>The Broken Earth Trilogy</div>
+      <div class="r-author">N. K. Jemisin</div>
+      <div class="r-year">2015</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="28">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>This Is How You Lose the Time War</div>
+      <div class="r-author">Amal El-Mohtar &amp; Max Gladstone</div>
+      <div class="r-year">2019</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="29">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Exhalation</div>
+      <div class="r-author">Ted Chiang</div>
+      <div class="r-year">2019</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="30">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Emergency Skin</div>
+      <div class="r-author">N. K. Jemisin</div>
+      <div class="r-year">2019</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="31">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>The Overstory</div>
+      <div class="r-author">Richard Powers</div>
+      <div class="r-year">2018</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="32">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>The Best of Greg Egan</div>
+      <div class="r-author">Greg Egan</div>
+      <div class="r-year">2019</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="33">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Distress</div>
+      <div class="r-author">Greg Egan</div>
+      <div class="r-year">1995</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="34">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>Quarantine</div>
+      <div class="r-author">Greg Egan</div>
+      <div class="r-year">1992</div>
+      <div class="r-cat">Literature</div>
+    </div><div class="row" data-i="35">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Critique of Pure Reason</div>
+      <div class="r-author">Immanuel Kant</div>
+      <div class="r-year">1781</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="36">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>Six Memos for the Next Millennium</div>
+      <div class="r-author">Italo Calvino</div>
+      <div class="r-year">1988</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="37">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>Phenomenology of Spirit</div>
+      <div class="r-author">G. W. F. Hegel</div>
+      <div class="r-year">1807</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="38">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Trickster Makes the World</div>
+      <div class="r-author">Lewis Hyde</div>
+      <div class="r-year">1998</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="39">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>Steps to an Ecology of Mind</div>
+      <div class="r-author">Gregory Bateson</div>
+      <div class="r-year">1972</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="40">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>System and Structure</div>
+      <div class="r-author">Anthony Wilden</div>
+      <div class="r-year">1972</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="41">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Gramophone, Film, Typewriter</div>
+      <div class="r-author">Friedrich Kittler</div>
+      <div class="r-year">1986</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="42">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Theory of Prose</div>
+      <div class="r-author">Viktor Shklovsky</div>
+      <div class="r-year">1925</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="43">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Graphs, Maps and Trees</div>
+      <div class="r-author">Franco Moretti</div>
+      <div class="r-year">2005</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="44">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Of Grammatology</div>
+      <div class="r-author">Jacques Derrida</div>
+      <div class="r-year">1967</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="45">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Tractatus Logico-Philosophicus</div>
+      <div class="r-author">Ludwig Wittgenstein</div>
+      <div class="r-year">1921</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="46">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>The Structure of Scientific Revolutions</div>
+      <div class="r-author">Thomas S. Kuhn</div>
+      <div class="r-year">1962</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="47">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>The Poetic Structure of the World</div>
+      <div class="r-author">Fernand Hallyn</div>
+      <div class="r-year">1987</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="48">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Mathematics: The Loss of Certainty</div>
+      <div class="r-author">Morris Kline</div>
+      <div class="r-year">1980</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="49">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>The World as Will and Representation</div>
+      <div class="r-author">Arthur Schopenhauer</div>
+      <div class="r-year">1818</div>
+      <div class="r-cat">Philosophy &amp; Theory</div>
+    </div><div class="row" data-i="50">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Counterexamples in Quantum Information</div>
+      <div class="r-author">A community document</div>
+      <div class="r-year">—</div>
+      <div class="r-cat">Quantum</div>
+    </div><div class="row" data-i="51">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Quantum Computation and Quantum Information</div>
+      <div class="r-author">Michael Nielsen &amp; Isaac Chuang</div>
+      <div class="r-year">2000</div>
+      <div class="r-cat">Quantum</div>
+    </div><div class="row" data-i="52">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>A Practical Quantum Instruction Set Architecture</div>
+      <div class="r-author">R. Smith, M. Curtis &amp; W. Zeng</div>
+      <div class="r-year">2016</div>
+      <div class="r-cat">Quantum</div>
+    </div><div class="row" data-i="53">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>No Return to Classical Reality</div>
+      <div class="r-author">David Jennings &amp; Matthew Leifer</div>
+      <div class="r-year">2015</div>
+      <div class="r-cat">Quantum</div>
+    </div><div class="row" data-i="54">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>The Emergent Multiverse</div>
+      <div class="r-author">David Wallace</div>
+      <div class="r-year">2012</div>
+      <div class="r-cat">Quantum</div>
+    </div><div class="row" data-i="55">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Physics, Topology, Logic and Computation: A Rosetta Stone</div>
+      <div class="r-author">John Baez &amp; Mike Stay</div>
+      <div class="r-year">2009</div>
+      <div class="r-cat">Physics</div>
+    </div><div class="row" data-i="56">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>The Princeton Companion to Mathematics</div>
+      <div class="r-author">Timothy Gowers (ed.)</div>
+      <div class="r-year">2008</div>
+      <div class="r-cat">Mathematics</div>
+    </div><div class="row" data-i="57">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>Conceptual Mathematics</div>
+      <div class="r-author">F. W. Lawvere &amp; S. Schanuel</div>
+      <div class="r-year">1997</div>
+      <div class="r-cat">Mathematics</div>
+    </div><div class="row" data-i="58">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>Basic Category Theory for Computer Scientists</div>
+      <div class="r-author">Benjamin C. Pierce</div>
+      <div class="r-year">1991</div>
+      <div class="r-cat">Mathematics</div>
+    </div><div class="row" data-i="59">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Groups and Their Graphs</div>
+      <div class="r-author">Israel Grossman &amp; Wilhelm Magnus</div>
+      <div class="r-year">1964</div>
+      <div class="r-cat">Mathematics</div>
+    </div><div class="row" data-i="60">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Homotopy Type Theory</div>
+      <div class="r-author">The Univalent Foundations Program</div>
+      <div class="r-year">2013</div>
+      <div class="r-cat">Mathematics</div>
+    </div><div class="row" data-i="61">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Mathematics, Morally</div>
+      <div class="r-author">Eugenia Cheng</div>
+      <div class="r-year">2004</div>
+      <div class="r-cat">Mathematics</div>
+    </div><div class="row" data-i="62">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>Where Mathematics Comes From</div>
+      <div class="r-author">George Lakoff &amp; Rafael Núñez</div>
+      <div class="r-year">2000</div>
+      <div class="r-cat">Mathematics</div>
+    </div><div class="row" data-i="63">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Why Philosophers Should Care About Computational Complexity</div>
+      <div class="r-author">Scott Aaronson</div>
+      <div class="r-year">2011</div>
+      <div class="r-cat">Computing</div>
+    </div><div class="row" data-i="64">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>You and Your Research</div>
+      <div class="r-author">Richard Hamming</div>
+      <div class="r-year">1986</div>
+      <div class="r-cat">Computing</div>
+    </div><div class="row" data-i="65">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Where Wizards Stay Up Late</div>
+      <div class="r-author">Katie Hafner &amp; Matthew Lyon</div>
+      <div class="r-year">1996</div>
+      <div class="r-cat">History of Science</div>
+    </div><div class="row" data-i="66">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>The Man Behind the Microchip</div>
+      <div class="r-author">Leslie Berlin</div>
+      <div class="r-year">2005</div>
+      <div class="r-cat">History of Science</div>
+    </div><div class="row" data-i="67">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>The Supermen</div>
+      <div class="r-author">Charles J. Murray</div>
+      <div class="r-year">1997</div>
+      <div class="r-cat">History of Science</div>
+    </div><div class="row" data-i="68">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>The Pixar Touch</div>
+      <div class="r-author">David A. Price</div>
+      <div class="r-year">2008</div>
+      <div class="r-cat">History of Science</div>
+    </div><div class="row" data-i="69">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>The Making of the Atomic Bomb</div>
+      <div class="r-author">Richard Rhodes</div>
+      <div class="r-year">1986</div>
+      <div class="r-cat">History of Science</div>
+    </div><div class="row" data-i="70">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>The Age of Wonder</div>
+      <div class="r-author">Richard Holmes</div>
+      <div class="r-year">2008</div>
+      <div class="r-cat">History of Science</div>
+    </div><div class="row" data-i="71">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Minds, Machines, and the Multiverse</div>
+      <div class="r-author">Julian Brown</div>
+      <div class="r-year">2000</div>
+      <div class="r-cat">History of Science</div>
+    </div><div class="row" data-i="72">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Oppenheimer's Farewell Speech</div>
+      <div class="r-author">J. Robert Oppenheimer</div>
+      <div class="r-year">1945</div>
+      <div class="r-cat">Technology &amp; Ethics</div>
+    </div><div class="row" data-i="73">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>Lawrence of Arabia</div>
+      <div class="r-author">David Lean</div>
+      <div class="r-year">1962</div>
+      <div class="r-cat">Film</div>
+    </div><div class="row" data-i="74">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>Ex Machina</div>
+      <div class="r-author">Alex Garland</div>
+      <div class="r-year">2014</div>
+      <div class="r-cat">Film</div>
+    </div><div class="row" data-i="75">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Paprika</div>
+      <div class="r-author">Satoshi Kon</div>
+      <div class="r-year">2006</div>
+      <div class="r-cat">Film</div>
+    </div><div class="row" data-i="76">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Tokyo Godfathers</div>
+      <div class="r-author">Satoshi Kon</div>
+      <div class="r-year">2003</div>
+      <div class="r-cat">Film</div>
+    </div><div class="row" data-i="77">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>Synecdoche, New York</div>
+      <div class="r-author">Charlie Kaufman</div>
+      <div class="r-year">2008</div>
+      <div class="r-cat">Film</div>
+    </div><div class="row" data-i="78">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>8½</div>
+      <div class="r-author">Federico Fellini</div>
+      <div class="r-year">1963</div>
+      <div class="r-cat">Film</div>
+    </div><div class="row" data-i="79">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>Cowboy Bebop, Samurai Champloo &amp; Space Dandy</div>
+      <div class="r-author">Shinichirō Watanabe</div>
+      <div class="r-year">1998</div>
+      <div class="r-cat">Film</div>
+    </div><div class="row" data-i="80">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>The Cartographer Tries to Map a Way to Zion</div>
+      <div class="r-author">Kei Miller</div>
+      <div class="r-year">2014</div>
+      <div class="r-cat">Poetry</div>
+    </div><div class="row" data-i="81">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>The Waste Land</div>
+      <div class="r-author">T. S. Eliot</div>
+      <div class="r-year">1922</div>
+      <div class="r-cat">Poetry</div>
+    </div><div class="row" data-i="82">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>The Cinnamon Peeler</div>
+      <div class="r-author">Michael Ondaatje</div>
+      <div class="r-year">1989</div>
+      <div class="r-cat">Poetry</div>
+    </div><div class="row" data-i="83">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Oulipo Compendium</div>
+      <div class="r-author">Harry Mathews &amp; Alastair Brotchie (eds.)</div>
+      <div class="r-year">1998</div>
+      <div class="r-cat">Poetry</div>
+    </div><div class="row" data-i="84">
+      <div class="r-title"><span class="dot" style="background:#03A9F4"></span>The Nature of the Firm</div>
+      <div class="r-author">R. H. Coase</div>
+      <div class="r-year">1937</div>
+      <div class="r-cat">Economics</div>
+    </div><div class="row" data-i="85">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Radical Markets</div>
+      <div class="r-author">Eric A. Posner &amp; E. Glen Weyl</div>
+      <div class="r-year">2018</div>
+      <div class="r-cat">Economics</div>
+    </div><div class="row" data-i="86">
+      <div class="r-title"><span class="dot" style="background:#90a4ae"></span>Leadership on the Line</div>
+      <div class="r-author">Ronald Heifetz &amp; Marty Linsky</div>
+      <div class="r-year">2002</div>
+      <div class="r-cat">Leadership</div>
+    </div><div class="row" data-i="87">
+      <div class="r-title"><span class="dot" style="background:#566b78"></span>Do No Harm</div>
+      <div class="r-author">Henry Marsh</div>
+      <div class="r-year">2014</div>
+      <div class="r-cat">Other</div>
+    </div><div class="row" data-i="88">
+      <div class="r-title"><span class="dot" style="background:#3F51B5"></span>Peaks of Yemen I Summon</div>
+      <div class="r-author">Steven C. Caton</div>
+      <div class="r-year">1990</div>
+      <div class="r-cat">Other</div>
+    </div></div>
+    </div>
+  </section>
+</main>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal" id="modal">
+    <button class="mclose" id="mclose">✕</button>
+    <div class="mlabel" id="mLabel">Book</div>
+    <h3 id="mTitle"></h3>
+    <div class="mline"><span class="lab" id="mRoleLabel">Author</span><span class="val" id="mAuthor"></span></div>
+    <div class="mline"><span class="lab">Year</span><span class="val" id="mYear"></span></div>
+    <div class="mline"><span class="lab" id="mShelfLabel">Shelf</span><span class="val" id="mCat"></span></div>
+    <div class="mnote" id="mNote" style="display:none"></div>
+    <a class="mopen" id="mOpen" target="_blank" rel="noopener" style="display:none">open source ↗</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>public library · 89 entries · <a href="https://willzeng.com/">willzeng.com</a></span>
+    <span>collection design after The Cypherpunk Library</span>
+  </div>
+</footer>
+
+<!--
+  ============================================================
+   THE LIBRARY  —  edit the JSON below to update the shelf.
+   Each book is ONE line. To ADD a book, copy a line and edit
+   the fields; to REMOVE one, delete its line.
+
+     title     book / work title                      (required)
+     author    author; shown as "Director" for films  (required)
+     year      publication year (number) or null      (required)
+     category  the shelf it sits on; should match a
+               name in "shelves"                      (required)
+     tags      extra shelves it ALSO belongs to, as a
+               list, e.g. ["Physics","Computing"]       (optional)
+     kind      one of: book, paper, essay, speech,
+               doc, film                               (required)
+     link      a URL (arXiv, etc.) — omit if none      (optional)
+     note      shown in the detail card — omit if none (optional)
+
+   Valid JSON only: double quotes, a comma between entries,
+   and NO comma after the very last entry. Add a new shelf by
+   adding its name to "shelves" and using it as a category.
+  ============================================================
+-->
+<script type="application/json" id="library-data">
+  {
+    "shelves": [
+      "Literature", "Philosophy & Theory", "Quantum", "Physics", "Mathematics", "Computing",
+      "History of Science", "Technology & Ethics", "Film", "Poetry", "Economics", "Leadership", "Other"
+    ],
+    "books": [
+      { "title": "The Man Without Qualities", "author": "Robert Musil", "year": 1930, "category": "Literature", "kind": "book" },
+      { "title": "That Awful Mess on the Via Merulana", "author": "Carlo Emilio Gadda", "year": 1957, "category": "Literature", "kind": "book" },
+      { "title": "The Passenger", "author": "Cormac McCarthy", "year": 2022, "category": "Literature", "kind": "book" },
+      { "title": "Stella Maris", "author": "Cormac McCarthy", "year": 2022, "category": "Literature", "kind": "book" },
+      { "title": "Locus Solus", "author": "Raymond Roussel", "year": 1914, "category": "Literature", "kind": "book" },
+      { "title": "Invisible Cities", "author": "Italo Calvino", "year": 1972, "category": "Literature", "kind": "book" },
+      { "title": "t zero", "author": "Italo Calvino", "year": 1967, "category": "Literature", "kind": "book" },
+      { "title": "Star Maker", "author": "Olaf Stapledon", "year": 1937, "category": "Literature", "kind": "book" },
+      { "title": "Cosmicomics", "author": "Italo Calvino", "year": 1965, "category": "Literature", "kind": "book" },
+      { "title": "Jesus' Son", "author": "Denis Johnson", "year": 1992, "category": "Literature", "kind": "book" },
+      { "title": "Ficciones", "author": "Jorge Luis Borges", "year": 1944, "category": "Literature", "kind": "book", "note": "Especially “The Immortal.”" },
+      { "title": "Blood Meridian", "author": "Cormac McCarthy", "year": 1985, "category": "Literature", "kind": "book" },
+      { "title": "Naked Lunch", "author": "William S. Burroughs", "year": 1959, "category": "Literature", "kind": "book" },
+      { "title": "Stranger in a Strange Land", "author": "Robert A. Heinlein", "year": 1961, "category": "Literature", "kind": "book" },
+      { "title": "Life a User's Manual", "author": "Georges Perec", "year": 1978, "category": "Literature", "kind": "book" },
+      { "title": "Sum", "author": "David Eagleman", "year": 2009, "category": "Literature", "kind": "book" },
+      { "title": "A Case of Conscience", "author": "James Blish", "year": 1958, "category": "Literature", "kind": "book" },
+      { "title": "Red Cavalry", "author": "Isaac Babel", "year": 1926, "category": "Literature", "kind": "book" },
+      { "title": "The Age of Wire and String", "author": "Ben Marcus", "year": 1995, "category": "Literature", "kind": "book" },
+      { "title": "Stories of Your Life and Others", "author": "Ted Chiang", "year": 2002, "category": "Literature", "kind": "book" },
+      { "title": "The Void Captain's Tale", "author": "Norman Spinrad", "year": 1983, "category": "Literature", "kind": "book" },
+      { "title": "Blindsight", "author": "Peter Watts", "year": 2006, "category": "Literature", "kind": "book" },
+      { "title": "Matterhorn", "author": "Karl Marlantes", "year": 2010, "category": "Literature", "kind": "book" },
+      { "title": "Wittgenstein's Mistress", "author": "David Markson", "year": 1988, "category": "Literature", "kind": "book" },
+      { "title": "2312", "author": "Kim Stanley Robinson", "year": 2012, "category": "Literature", "kind": "book" },
+      { "title": "Cat's Cradle", "author": "Kurt Vonnegut", "year": 1963, "category": "Literature", "kind": "book" },
+      { "title": "Labyrinths", "author": "Jorge Luis Borges", "year": 1962, "category": "Literature", "kind": "book" },
+      { "title": "The Broken Earth Trilogy", "author": "N. K. Jemisin", "year": 2015, "category": "Literature", "kind": "book" },
+      { "title": "This Is How You Lose the Time War", "author": "Amal El-Mohtar & Max Gladstone", "year": 2019, "category": "Literature", "kind": "book" },
+      { "title": "Exhalation", "author": "Ted Chiang", "year": 2019, "category": "Literature", "kind": "book" },
+      { "title": "Emergency Skin", "author": "N. K. Jemisin", "year": 2019, "category": "Literature", "kind": "book", "note": "Listed as “Second Skin” — no such Jemisin title exists; corrected to Emergency Skin." },
+      { "title": "The Overstory", "author": "Richard Powers", "year": 2018, "category": "Literature", "kind": "book" },
+      { "title": "The Best of Greg Egan", "author": "Greg Egan", "year": 2019, "category": "Literature", "kind": "book", "link": "https://www.amazon.com/Best-Greg-Egan/dp/1596069422" },
+      { "title": "Distress", "author": "Greg Egan", "year": 1995, "category": "Literature", "kind": "book" },
+      { "title": "Quarantine", "author": "Greg Egan", "year": 1992, "category": "Literature", "kind": "book" },
+
+      { "title": "Critique of Pure Reason", "author": "Immanuel Kant", "year": 1781, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "Six Memos for the Next Millennium", "author": "Italo Calvino", "year": 1988, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "Phenomenology of Spirit", "author": "G. W. F. Hegel", "year": 1807, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "Trickster Makes the World", "author": "Lewis Hyde", "year": 1998, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "Steps to an Ecology of Mind", "author": "Gregory Bateson", "year": 1972, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "System and Structure", "author": "Anthony Wilden", "year": 1972, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "Gramophone, Film, Typewriter", "author": "Friedrich Kittler", "year": 1986, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "Theory of Prose", "author": "Viktor Shklovsky", "year": 1925, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "Graphs, Maps and Trees", "author": "Franco Moretti", "year": 2005, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "Of Grammatology", "author": "Jacques Derrida", "year": 1967, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "Tractatus Logico-Philosophicus", "author": "Ludwig Wittgenstein", "year": 1921, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "The Structure of Scientific Revolutions", "author": "Thomas S. Kuhn", "year": 1962, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "The Poetic Structure of the World", "author": "Fernand Hallyn", "year": 1987, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "Mathematics: The Loss of Certainty", "author": "Morris Kline", "year": 1980, "category": "Philosophy & Theory", "kind": "book" },
+      { "title": "The World as Will and Representation", "author": "Arthur Schopenhauer", "year": 1818, "category": "Philosophy & Theory", "kind": "book" },
+
+      { "title": "Counterexamples in Quantum Information", "author": "A community document", "year": null, "category": "Quantum", "tags": ["Physics"], "kind": "doc", "link": "https://docs.google.com/document/d/1ysBvFXcAPldOJ96Jz4CXJa8h93oIVZnfZTUYDiRZAF8/mobilebasic" },
+      { "title": "Quantum Computation and Quantum Information", "author": "Michael Nielsen & Isaac Chuang", "year": 2000, "category": "Quantum", "tags": ["Physics"], "kind": "book" },
+      { "title": "A Practical Quantum Instruction Set Architecture", "author": "R. Smith, M. Curtis & W. Zeng", "year": 2016, "category": "Quantum", "tags": ["Physics"], "kind": "paper", "link": "https://arxiv.org/abs/1608.03355" },
+      { "title": "No Return to Classical Reality", "author": "David Jennings & Matthew Leifer", "year": 2015, "category": "Quantum", "tags": ["Physics"], "kind": "paper", "link": "https://arxiv.org/abs/1501.03202" },
+      { "title": "The Emergent Multiverse", "author": "David Wallace", "year": 2012, "category": "Quantum", "tags": ["Physics"], "kind": "book" },
+
+      { "title": "Physics, Topology, Logic and Computation: A Rosetta Stone", "author": "John Baez & Mike Stay", "year": 2009, "category": "Physics", "kind": "paper", "link": "https://arxiv.org/abs/0903.0340" },
+
+      { "title": "The Princeton Companion to Mathematics", "author": "Timothy Gowers (ed.)", "year": 2008, "category": "Mathematics", "kind": "book" },
+      { "title": "Conceptual Mathematics", "author": "F. W. Lawvere & S. Schanuel", "year": 1997, "category": "Mathematics", "kind": "book" },
+      { "title": "Basic Category Theory for Computer Scientists", "author": "Benjamin C. Pierce", "year": 1991, "category": "Mathematics", "kind": "book" },
+      { "title": "Groups and Their Graphs", "author": "Israel Grossman & Wilhelm Magnus", "year": 1964, "category": "Mathematics", "kind": "book" },
+      { "title": "Homotopy Type Theory", "author": "The Univalent Foundations Program", "year": 2013, "category": "Mathematics", "kind": "book" },
+      { "title": "Mathematics, Morally", "author": "Eugenia Cheng", "year": 2004, "category": "Mathematics", "kind": "essay" },
+      { "title": "Where Mathematics Comes From", "author": "George Lakoff & Rafael Núñez", "year": 2000, "category": "Mathematics", "kind": "book" },
+
+      { "title": "Why Philosophers Should Care About Computational Complexity", "author": "Scott Aaronson", "year": 2011, "category": "Computing", "kind": "paper", "link": "https://arxiv.org/abs/1108.1791" },
+      { "title": "You and Your Research", "author": "Richard Hamming", "year": 1986, "category": "Computing", "kind": "essay" },
+
+      { "title": "Where Wizards Stay Up Late", "author": "Katie Hafner & Matthew Lyon", "year": 1996, "category": "History of Science", "tags": ["Computing"], "kind": "book" },
+      { "title": "The Man Behind the Microchip", "author": "Leslie Berlin", "year": 2005, "category": "History of Science", "tags": ["Computing"], "kind": "book" },
+      { "title": "The Supermen", "author": "Charles J. Murray", "year": 1997, "category": "History of Science", "tags": ["Computing"], "kind": "book" },
+      { "title": "The Pixar Touch", "author": "David A. Price", "year": 2008, "category": "History of Science", "kind": "book" },
+      { "title": "The Making of the Atomic Bomb", "author": "Richard Rhodes", "year": 1986, "category": "History of Science", "tags": ["Physics"], "kind": "book" },
+      { "title": "The Age of Wonder", "author": "Richard Holmes", "year": 2008, "category": "History of Science", "kind": "book" },
+      { "title": "Minds, Machines, and the Multiverse", "author": "Julian Brown", "year": 2000, "category": "History of Science", "tags": ["Quantum","Physics","Computing"], "kind": "book" },
+
+      { "title": "Oppenheimer's Farewell Speech", "author": "J. Robert Oppenheimer", "year": 1945, "category": "Technology & Ethics", "kind": "speech", "link": "https://www.atomicarchive.com/resources/documents/manhattan-project/oppenheimer-farewell.html" },
+
+      { "title": "Lawrence of Arabia", "author": "David Lean", "year": 1962, "category": "Film", "kind": "film" },
+      { "title": "Ex Machina", "author": "Alex Garland", "year": 2014, "category": "Film", "kind": "film" },
+      { "title": "Paprika", "author": "Satoshi Kon", "year": 2006, "category": "Film", "kind": "film" },
+      { "title": "Tokyo Godfathers", "author": "Satoshi Kon", "year": 2003, "category": "Film", "kind": "film" },
+      { "title": "Synecdoche, New York", "author": "Charlie Kaufman", "year": 2008, "category": "Film", "kind": "film" },
+      { "title": "8½", "author": "Federico Fellini", "year": 1963, "category": "Film", "kind": "film" },
+      { "title": "Cowboy Bebop, Samurai Champloo & Space Dandy", "author": "Shinichirō Watanabe", "year": 1998, "category": "Film", "kind": "film" },
+
+      { "title": "The Cartographer Tries to Map a Way to Zion", "author": "Kei Miller", "year": 2014, "category": "Poetry", "kind": "book" },
+      { "title": "The Waste Land", "author": "T. S. Eliot", "year": 1922, "category": "Poetry", "kind": "book" },
+      { "title": "The Cinnamon Peeler", "author": "Michael Ondaatje", "year": 1989, "category": "Poetry", "kind": "book" },
+      { "title": "Oulipo Compendium", "author": "Harry Mathews & Alastair Brotchie (eds.)", "year": 1998, "category": "Poetry", "kind": "book" },
+
+      { "title": "The Nature of the Firm", "author": "R. H. Coase", "year": 1937, "category": "Economics", "kind": "paper", "link": "https://onlinelibrary.wiley.com/doi/full/10.1111/j.1468-0335.1937.tb00002.x" },
+      { "title": "Radical Markets", "author": "Eric A. Posner & E. Glen Weyl", "year": 2018, "category": "Economics", "kind": "book" },
+
+      { "title": "Leadership on the Line", "author": "Ronald Heifetz & Marty Linsky", "year": 2002, "category": "Leadership", "kind": "book" },
+
+      { "title": "Do No Harm", "author": "Henry Marsh", "year": 2014, "category": "Other", "kind": "book" },
+      { "title": "Peaks of Yemen I Summon", "author": "Steven C. Caton", "year": 1990, "category": "Other", "kind": "book" }
+    ]
+  }
+</script>
+
+<script>
+const BRAND = "public library";
+
+// ---------------------------------------------------------------------------
+// The library data lives in the <script id="library-data"> JSON block above.
+// Edit books there, not here. We read that JSON and map the readable field
+// names onto the short keys used internally by the renderer.
+// ---------------------------------------------------------------------------
+const DATA = JSON.parse(document.getElementById("library-data").textContent);
+const books = DATA.books.map(b=>{
+  const cats=[b.category].concat(Array.isArray(b.tags)?b.tags:[]).filter((v,i,a)=>v&&a.indexOf(v)===i);
+  return {t:b.title,a:b.author,y:(b.year==null?null:b.year),c:b.category,cats:cats,k:b.kind,l:b.link,n:b.note};
+});
+
+// Filter-chip (shelf) order: the declared order first, then any extra
+// categories that appear in the books but were not listed in "shelves".
+const declaredShelves = Array.isArray(DATA.shelves) ? DATA.shelves : [];
+const foundShelves = [...new Set(books.flatMap(b=>b.cats))];
+const CATS = [...declaredShelves.filter(c=>foundShelves.includes(c)), ...foundShelves.filter(c=>!declaredShelves.includes(c))];
+const KINDLABEL={book:"Book",paper:"Paper",essay:"Essay",speech:"Speech",doc:"Document",film:"Film"};
+
+// blue-family accents from willzeng.com palette
+const ACCENTS=["#03A9F4","#3F51B5","#566b78","#90a4ae"];
+function hash(s){let h=0;for(let i=0;i<s.length;i++){h=(h<<5)-h+s.charCodeAt(i);h|=0;}return Math.abs(h);}
+function accentFor(b){
+  if(b.k==="paper"||b.k==="doc") return "#03A9F4";
+  if(b.k==="speech"||b.k==="essay") return "#3F51B5";
+  return ACCENTS[hash(b.t)%ACCENTS.length];
+}
+
+let state={q:"",cat:"All",view:"cover"};
+const grid=document.getElementById("grid");
+const list=document.getElementById("list");
+const chipsEl=document.getElementById("chips");
+const countEl=document.getElementById("count");
+
+function buildChips(){
+  const counts={All:books.length};
+  CATS.forEach(c=>counts[c]=books.filter(b=>b.cats.includes(c)).length);
+  const order=["All",...CATS.filter(c=>counts[c]>0)];
+  chipsEl.innerHTML=order.map(c=>{
+    const active=c===state.cat?" active":"";
+    const label=c==="All"?"all":c.toLowerCase();
+    return `<button class="chip${active}" data-cat="${c}">${label}<span class="ct">${counts[c]}</span></button>`;
+  }).join("");
+  chipsEl.querySelectorAll(".chip").forEach(ch=>ch.onclick=()=>{state.cat=ch.dataset.cat;buildChips();render();});
+}
+
+function filtered(){
+  const q=state.q.toLowerCase().trim();
+  return books.filter(b=>{
+    if(state.cat!=="All"&&!b.cats.includes(state.cat)) return false;
+    if(!q) return true;
+    return (b.t+" "+b.a+" "+b.cats.join(" ")).toLowerCase().includes(q);
+  });
+}
+
+function render(){
+  const items=filtered();
+  countEl.textContent=items.length;
+  grid.innerHTML=items.map((b,i)=>{
+    const acc=accentFor(b);
+    const yr=b.y?`<span class="yr">${b.y}</span>`:`<span class="yr">—</span>`;
+    const ext=b.l?'<span class="ext">↗</span>':'';
+    return `<article class="cover" style="--accent:${acc};animation-delay:${Math.min(i*18,420)}ms" data-i="${books.indexOf(b)}">
+      <div class="clabel">${BRAND}</div>${ext}
+      <div class="ctitle">${b.t}</div>
+      <div class="cmeta">${b.a}<br>${yr}</div>
+      <div class="ctag">${KINDLABEL[b.k]||"Book"}</div>
+    </article>`;
+  }).join("");
+  grid.querySelectorAll(".cover").forEach(el=>el.onclick=()=>openModal(books[+el.dataset.i]));
+  list.innerHTML=items.map(b=>{
+    const acc=accentFor(b);
+    return `<div class="row" data-i="${books.indexOf(b)}">
+      <div class="r-title"><span class="dot" style="background:${acc}"></span>${b.t}</div>
+      <div class="r-author">${b.a}</div>
+      <div class="r-year">${b.y||"—"}</div>
+      <div class="r-cat">${b.c}</div>
+    </div>`;
+  }).join("");
+  list.querySelectorAll(".row").forEach(el=>el.onclick=()=>openModal(books[+el.dataset.i]));
+}
+
+const vCover=document.getElementById("vCover"),vList=document.getElementById("vList");
+vCover.onclick=()=>{state.view="cover";vCover.classList.add("active");vList.classList.remove("active");grid.classList.remove("hide");list.classList.remove("show");};
+vList.onclick=()=>{state.view="list";vList.classList.add("active");vCover.classList.remove("active");grid.classList.add("hide");list.classList.add("show");};
+document.getElementById("search").oninput=e=>{state.q=e.target.value;render();};
+
+// modal
+const modalBg=document.getElementById("modalBg");
+function openModal(b){
+  document.getElementById("mLabel").textContent=KINDLABEL[b.k]||"Book";
+  document.getElementById("mTitle").textContent=b.t;
+  document.getElementById("mRoleLabel").textContent=b.k==="film"?"Director":(b.k==="doc"?"Source":"Author");
+  document.getElementById("mAuthor").textContent=b.a;
+  document.getElementById("mYear").textContent=b.y||"—";
+  document.getElementById("mCat").textContent=b.cats.join(", ");
+  document.getElementById("mShelfLabel").textContent=b.cats.length>1?"Shelves":"Shelf";
+  const note=document.getElementById("mNote");
+  if(b.n){note.style.display="block";note.textContent=b.n;}else{note.style.display="none";}
+  const open=document.getElementById("mOpen");
+  if(b.l){open.style.display="inline-block";open.href=b.l;open.textContent=(b.k==="film"?"find it ↗":"open source ↗");}else{open.style.display="none";}
+  document.getElementById("modal").style.setProperty("--accent",accentFor(b));
+  modalBg.classList.add("open");
+}
+function closeModal(){modalBg.classList.remove("open");}
+document.getElementById("mclose").onclick=closeModal;
+modalBg.onclick=e=>{if(e.target===modalBg)closeModal();};
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+
+// scrolling shelf (seamless marquee + drag-to-browse)
+function buildShelf(){
+  const track=document.getElementById("track");
+  const spinePal=["#b0bec5","#90a4ae","#78909c","#566b78","#03A9F4","#3F51B5","#a2dffb","#cfd8dc","#455a64"];
+  const picks=books.filter((_,i)=>i%2===0); // a varied subset across shelves
+  const make=(b)=>{
+    const h=hash(b.t);
+    const ht=150+(h%70);
+    const w=26+(h%20);
+    const col=spinePal[h%spinePal.length];
+    const light=["#a2dffb","#b0bec5","#cfd8dc"].includes(col);
+    const st=light?"#33414a":"#ffffff";
+    const idx=books.indexOf(b);
+    return `<div class="spine" data-i="${idx}" style="--h:${ht}px;--w:${w}px;--c:${col};--st:${st}"><span>${b.t}</span></div>`;
+  };
+  const seq=picks.map(make).join("");
+  track.innerHTML=seq+seq; // duplicate for seamless infinite loop
+  track.querySelectorAll(".spine").forEach(el=>el.addEventListener("click",()=>openModal(books[+el.dataset.i])));
+}
+
+buildChips();render();buildShelf();
+</script>
+
+
+</body></html>
