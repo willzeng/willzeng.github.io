@@ -24,7 +24,6 @@ html{scroll-behavior:smooth}
 body{
   background:var(--bg);color:var(--body);
   font-family:var(--mono);font-size:16px;line-height:1.5;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;
   padding-top:4em;
 }
 ::selection{background:var(--highlight);color:var(--fg)}
@@ -32,10 +31,10 @@ a{color:var(--link);word-wrap:break-word;}
 a:visited{color:var(--visited)}
 strong{font-weight:700;color:var(--fg)}
 
-.wrap{max-width:52em;margin:0 auto;padding:0 1em}
+.wrap{max-width:54em;margin:0 auto;padding:0 1em}
 .prose{max-width:52em}
 h1{color:var(--fg);margin:0.67em 0}
-
+blockquote{border-left:3px solid var(--rule);margin:1.5em 0;padding:0.5em 1.2em;color:var(--quote-fg)}
 
 /* hero / verbatim opening */
 .hero{padding-top:0;padding-bottom:1.2em}
